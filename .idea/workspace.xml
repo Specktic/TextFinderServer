@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- add a socket class for client communication">
-      <change afterPath="$PROJECT_DIR$/src/SocketData.java" afterDir="false" />
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- add SocketData class for data storage&#10;- add data output flux to server socket for receiving data from client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SocketData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SocketData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,14 @@
     "project.structure.side.proportion": "0.3816092"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SSocket">
+    <configuration name="SSocket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SSocket" />
+      <module name="TextFinderServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Server" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="TextFinderServer" />
@@ -57,6 +63,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SSocket" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -67,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665515426690</updated>
       <workItem from="1665515428768" duration="1908000" />
-      <workItem from="1665781213001" duration="3494000" />
+      <workItem from="1665781213001" duration="7028000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -83,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665782163881</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- add SocketData class for data storage&#10;- add data output flux to server socket for receiving data from client">
+      <created>1665790398785</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665790398785</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +121,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Initial commit" />
     <MESSAGE value="- add a socket class for client communication" />
-    <option name="LAST_COMMIT_MESSAGE" value="- add a socket class for client communication" />
+    <MESSAGE value="- add SocketData class for data storage&#10;- add data output flux to server socket for receiving data from client" />
+    <option name="LAST_COMMIT_MESSAGE" value="- add SocketData class for data storage&#10;- add data output flux to server socket for receiving data from client" />
   </component>
 </project>

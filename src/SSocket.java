@@ -10,7 +10,7 @@ public class SSocket {
     public SSocket(){
         try{
             /* a server socket is created for a given port */
-            ServerSocket ss = new ServerSocket(87312);
+            ServerSocket ss = new ServerSocket(6174);
             System.out.println("waiting...");
 
             /* a connection to the port is accepted */
@@ -26,7 +26,7 @@ public class SSocket {
             /* object to be read is created and filled with the input data flux */
             SocketData aux = new SocketData("");
             aux.readObject (bufferEntrada);
-            System.out.println ("received" + aux.toString());
+            System.out.println ("received: " + aux.toString());
 
             /* closes the client socket */
             cs.close();
