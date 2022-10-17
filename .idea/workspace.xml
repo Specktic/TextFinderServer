@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- adapt AVLTree class because of AVLNode encapsulation">
-      <change beforePath="$PROJECT_DIR$/src/AVLNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AVLNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AVLTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinarySearchNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryNode.java" afterDir="false" />
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- give basic functionality to BinaryNode">
+      <change beforePath="$PROJECT_DIR$/src/BinaryNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,7 @@
       <workItem from="1665853270283" duration="594000" />
       <workItem from="1665870208324" duration="6680000" />
       <workItem from="1665889407865" duration="2495000" />
-      <workItem from="1665961932869" duration="12092000" />
+      <workItem from="1665961932869" duration="12499000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -157,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665993920284</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="- give basic functionality to BinaryNode">
+      <created>1665994684117</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665994684117</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +192,7 @@
     <MESSAGE value="- add getter and setter method for word and occurrence attribute" />
     <MESSAGE value="- properly encapsulate AVLNode class" />
     <MESSAGE value="- adapt AVLTree class because of AVLNode encapsulation" />
-    <option name="LAST_COMMIT_MESSAGE" value="- adapt AVLTree class because of AVLNode encapsulation" />
+    <MESSAGE value="- give basic functionality to BinaryNode" />
+    <option name="LAST_COMMIT_MESSAGE" value="- give basic functionality to BinaryNode" />
   </component>
 </project>

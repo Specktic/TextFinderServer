@@ -27,4 +27,36 @@ public class BinaryNode {
 
     /** attribute 4, a binary node */
     private BinaryNode right;
+
+    /** getter and setter for word attribute */
+    public String getWord () {
+        return word;
+    }
+    public void setWord (String word) {
+        this.word = word;
+    }
+
+    /** getter and setter methods for occurrence attribute */
+    public List getOccurrence () {
+        return occurrence;
+    }
+    public void setOccurrence (List occurrence) {
+        this.occurrence = occurrence;
+    }
+
+    /** getter and setter methods for left attribute */
+    public BinaryNode getLeft() {
+        return left;
+    }
+    public void setLeft(BinaryNode left) {
+        this.left = left;
+    }
+
+    /** getter and setter methods for left attribute */
+    public BinaryNode getRight() {
+        return right;
+    }
+    public void setRight(BinaryNode right) {
+        this.right = right;
+    }
 }
