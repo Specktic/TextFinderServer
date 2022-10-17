@@ -2,12 +2,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class BinarySearchTree {
-    public static void main(String[] args){
-        BinarySearchTree binarySearchTree = new BinarySearchTree();
-        binarySearchTree.insert("abacus");
-        binarySearchTree.insert("bake");
-        binarySearchTree.insert("cake");
-    }
 
     /** constructor */
     public BinarySearchTree(){
