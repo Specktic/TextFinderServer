@@ -3,8 +3,11 @@ import java.util.List;
 
 public class BinarySearchTree {
     public static void main(String[] args){
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+        binarySearchTree.insert("abacus");
+        binarySearchTree.insert("bake");
+        binarySearchTree.insert("cake");
     }
-
 
     /** constructor */
     public BinarySearchTree(){
@@ -57,11 +60,11 @@ public class BinarySearchTree {
     private BinaryNode treeMin(BinaryNode node) {
         if (this.empty()) {
             return null;
-        } else if (node.getLeft() == null) {
-            return node;
         } else {
-            return treeMin(node.getLeft());
-        }
+            while (node.getLeft() != null) {
+                node = node.getLeft();
+            }
+        } return node;
     }
 
     /** public method for calling treeMax() method */
@@ -77,7 +80,7 @@ public class BinarySearchTree {
     private BinaryNode treeMax(BinaryNode node) {
         if (node != null) {
             while (node.getRight() != null){
-                node.getRight();
+                node = node.getRight();
             }
         } return node;
     }
@@ -122,8 +125,7 @@ public class BinarySearchTree {
     private BinaryNode delete(String word, BinaryNode node) {
 
         if (node == null){
-            return node;
-        }
+            return node;}
 
         int compare = word.compareTo(node.getWord());
 
