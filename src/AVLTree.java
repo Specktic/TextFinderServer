@@ -30,7 +30,7 @@ public class AVLTree {
     }
 
     /** method for performing a single left rotation */
-    private AVLNode rotateLeft(AVLNode m){
+    private AVLNode rotateLeft (AVLNode m){
         AVLNode m1 = m.getLeft();
         m.setLeft(m1.getRight());
         m1.setRight(m);
@@ -40,13 +40,13 @@ public class AVLTree {
     }
 
     /** method for performing a double left rotation */
-    private AVLNode doubleLeft(AVLNode m){
+    private AVLNode doubleLeft (AVLNode m){
         m.setLeft(rotateRight(m.getLeft()));
         return rotateLeft(m);
     }
 
     /** method for performing a single right rotation */
-    private AVLNode rotateRight(AVLNode m){
+    private AVLNode rotateRight (AVLNode m){
         AVLNode m1 = m.getRight();
         m.setRight(m1.getLeft());
         m1.setLeft(m);
@@ -56,7 +56,7 @@ public class AVLTree {
     }
 
     /** method for performing a double right rotation */
-    private AVLNode doubleRight(AVLNode m){
+    private AVLNode doubleRight (AVLNode m){
         m.setRight(rotateLeft(m.getRight()));
         return rotateLeft(m);
     }

@@ -33,42 +33,42 @@ public class AVLNode{
     private AVLNode right;
 
     /** getter and setter methods for word attribute */
-    public String getWord() {
+    public String getWord () {
         return word;
     }
-    public void setWord(String word) {
+    public void setWord (String word) {
         this.word = word;
     }
 
     /** getter and setter methods for occurrence attribute */
-    public List getOccurrence() {
+    public List getOccurrence () {
         return occurrence;
     }
-    public void setOccurrence(List occurrence) {
+    public void setOccurrence (List occurrence) {
         this.occurrence = occurrence;
     }
 
     /** getter and setter methods for height attribute */
-    public int getHeight() {
+    public int getHeight () {
         return height;
     }
-    public void setHeight(int height) {
+    public void setHeight (int height) {
         this.height = height;
     }
 
     /** getter and setter methods for left attribute */
-    public AVLNode getLeft() {
+    public AVLNode getLeft () {
         return left;
     }
-    public void setLeft(AVLNode left) {
+    public void setLeft (AVLNode left) {
         this.left = left;
     }
 
     /** getter and setter methods for right attribute */
-    public AVLNode getRight() {
+    public AVLNode getRight () {
         return right;
     }
-    public void setRight(AVLNode right) {
+    public void setRight (AVLNode right) {
         this.right = right;
     }
 }
