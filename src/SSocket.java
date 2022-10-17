@@ -21,12 +21,21 @@ public class SSocket {
             cs.setSoLinger(true, 10);
 
             /* data flux for receiving data from client */
-            DataInputStream bufferEntrada = new DataInputStream (cs.getInputStream());
+            DataInputStream bufferIn = new DataInputStream (cs.getInputStream());
 
-            /* object to be read is created and filled with the input data flux */
-            SocketData aux = new SocketData("");
-            aux.readObject (bufferEntrada);
-            System.out.println ("received: " + aux.toString());
+            /* object to be read is created and assigned data from the flux */
+            SocketData auxIn = new SocketData("");
+            auxIn.readObject (bufferIn);
+            System.out.println ("received: " + auxIn);
+
+            /* data flux for sending data to the client */
+            DataOutputStream bufferOut = new DataOutputStream (cs.getOutputStream());
+
+            /* object to be sent is created */
+            SocketData auxOut = new SocketData(auxIn.toString());
+            auxOut.writeObject (bufferOut);
+            System.out.println("sent: " + auxOut);
+
 
             /* closes the client socket */
             cs.close();
