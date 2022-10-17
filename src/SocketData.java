@@ -1,12 +1,8 @@
 import java.io.*;
 
-/**
- * data to be sent to server
- */
+/** data to be sent to server */
 public class SocketData implements Serializable{
-    /**
-     * constructor
-     */
+    /** constructor */
     public SocketData(String data){
         if (data != null){
             l = data.length();

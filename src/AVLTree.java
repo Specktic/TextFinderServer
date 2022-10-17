@@ -1,5 +1,8 @@
 public class AVLTree {
+    /** static final attribute that defines imbalance tolerance */
     private static final int TOLERANCE = 1;
+
+    /** method for getting height of a node */
     private int height (AVLNode t){
         return t == null ? -1 : t.height;
     }

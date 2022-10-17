@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- give basic functionality to AVL node">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- implement balance and rotation to AVL tree for further development">
+      <change beforePath="$PROJECT_DIR$/src/AVLNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AVLNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AVLTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SocketData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SocketData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
       <workItem from="1665853270283" duration="594000" />
       <workItem from="1665870208324" duration="6680000" />
       <workItem from="1665889407865" duration="2495000" />
-      <workItem from="1665961932869" duration="9804000" />
+      <workItem from="1665961932869" duration="10645000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -128,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665990364971</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- implement balance and rotation to AVL tree for further development">
+      <created>1665992578497</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665992578497</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +161,7 @@
     <MESSAGE value="- allow server to reply to the client" />
     <MESSAGE value="- add AVL tree class and node&#10;- add binary search tree and node" />
     <MESSAGE value="- give basic functionality to AVL node" />
-    <option name="LAST_COMMIT_MESSAGE" value="- give basic functionality to AVL node" />
+    <MESSAGE value="- implement balance and rotation to AVL tree for further development" />
+    <option name="LAST_COMMIT_MESSAGE" value="- implement balance and rotation to AVL tree for further development" />
   </component>
 </project>
