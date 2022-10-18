@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- implement Bubblesort algorithm for sorting results by name">
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- implement Bubblesort algorithm for sorting results by CREATION DATE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bubblesort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bubblesort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quicksort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quicksort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +56,16 @@
       <recent name="C:\Users\mavic\Desktop\Marco\Datos\Proyectos\Pr2\TextFinderServer" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Bubblesort">
+  <component name="RunManager" selected="Application.Quicksort">
     <configuration name="Bubblesort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Bubblesort" />
+      <module name="TextFinderServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Quicksort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Quicksort" />
       <module name="TextFinderServer" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -73,9 +81,11 @@
     <list>
       <item itemvalue="Application.SSocket" />
       <item itemvalue="Application.Bubblesort" />
+      <item itemvalue="Application.Quicksort" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Quicksort" />
         <item itemvalue="Application.Bubblesort" />
       </list>
     </recent_temporary>
@@ -96,7 +106,7 @@
       <workItem from="1665889407865" duration="2495000" />
       <workItem from="1665961932869" duration="14116000" />
       <workItem from="1666028958054" duration="4913000" />
-      <workItem from="1666054518432" duration="2652000" />
+      <workItem from="1666054518432" duration="5276000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -231,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666056599517</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="- implement Bubblesort algorithm for sorting results by CREATION DATE">
+      <created>1666057402132</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1666057402132</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +285,7 @@
     <MESSAGE value="- remove static void main() method from BinarySearchTree class" />
     <MESSAGE value="- create classes for the three sorting algorithms to use" />
     <MESSAGE value="- implement Bubblesort algorithm for sorting results by name" />
-    <option name="LAST_COMMIT_MESSAGE" value="- implement Bubblesort algorithm for sorting results by name" />
+    <MESSAGE value="- implement Bubblesort algorithm for sorting results by CREATION DATE" />
+    <option name="LAST_COMMIT_MESSAGE" value="- implement Bubblesort algorithm for sorting results by CREATION DATE" />
   </component>
 </project>

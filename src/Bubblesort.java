@@ -1,11 +1,9 @@
-import java.util.*;
-
 public class Bubblesort {
     /** constructor */
     public Bubblesort(){}
 
     /** sorting by bubblesort method */
-    public static void sort(int[] a) {
+    public void sort(int[] a) {
         int in;
         int out;
 
