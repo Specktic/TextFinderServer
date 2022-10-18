@@ -3,9 +3,6 @@ import java.io.DataOutputStream;
 import java.net.*;
 
 public class SSocket {
-    public static void main(String[] args){
-        new SSocket();
-    }
 
     public SSocket(){
         try{

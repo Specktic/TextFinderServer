@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- implement Quicksort algorithm for sorting results by name">
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- implement untested radix sort for sorting by word count">
+      <change afterPath="$PROJECT_DIR$/src/LibraryEditor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quicksort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quicksort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Radixsort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Radixsort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AVLNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AVLTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinaryNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SSocket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,61 +39,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/mavic/Desktop/Marco/Datos/Proyectos/Pr2/TextFinderServer",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3816092",
-    "settings.editor.selected.configurable": "editor.preferences.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mavic/Desktop/Marco/Datos/Proyectos/Pr2/TextFinderServer&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3816092&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mavic\Desktop\Marco\Datos\Proyectos\Pr2\TextFinderServer" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mavic\Desktop\Marco\Datos\Proyectos\Pr2\TextFinderServer" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Quicksort">
-    <configuration name="Bubblesort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Bubblesort" />
+  <component name="RunManager">
+    <configuration name="Server" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="TextFinderServer" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Quicksort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Quicksort" />
-      <module name="TextFinderServer" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SSocket" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SSocket" />
-      <module name="TextFinderServer" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.SSocket" />
-      <item itemvalue="Application.Bubblesort" />
-      <item itemvalue="Application.Quicksort" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Quicksort" />
-        <item itemvalue="Application.Bubblesort" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -106,7 +88,9 @@
       <workItem from="1665889407865" duration="2495000" />
       <workItem from="1665961932869" duration="14116000" />
       <workItem from="1666028958054" duration="4913000" />
-      <workItem from="1666054518432" duration="6987000" />
+      <workItem from="1666054518432" duration="7116000" />
+      <workItem from="1666110752292" duration="1133000" />
+      <workItem from="1666114760372" duration="1074000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -255,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666059882381</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="- implement untested radix sort for sorting by word count">
+      <created>1666061643584</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1666061643584</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +285,7 @@
     <MESSAGE value="- implement Bubblesort algorithm for sorting results by name" />
     <MESSAGE value="- implement Bubblesort algorithm for sorting results by CREATION DATE" />
     <MESSAGE value="- implement Quicksort algorithm for sorting results by name" />
-    <option name="LAST_COMMIT_MESSAGE" value="- implement Quicksort algorithm for sorting results by name" />
+    <MESSAGE value="- implement untested radix sort for sorting by word count" />
+    <option name="LAST_COMMIT_MESSAGE" value="- implement untested radix sort for sorting by word count" />
   </component>
 </project>
