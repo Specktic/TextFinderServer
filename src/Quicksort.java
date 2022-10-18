@@ -10,8 +10,8 @@ public class Quicksort {
     /** attribute 2, an int */
     private int size;
 
-    /** sorting by Quicksort method */
-    public void sort(String[] names){
+    /** public sorting method */
+    public void sort(String names[]){
         if (names == null || names.length == 0){
             return;
         }
@@ -20,6 +20,7 @@ public class Quicksort {
         quicksort(0, size - 1);
     }
 
+    /** quicksort method */
     private void quicksort(int low, int high) {
         int i = low;
         int j = high;
