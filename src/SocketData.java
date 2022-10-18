@@ -15,9 +15,7 @@ public class SocketData implements Serializable{
     /** attribute 2, an int */
     private int l;
 
-    /**
-     * method for reading data fluxes as strings
-     */
+    /** method for reading data fluxes as strings */
     public String toString(){
         return d;
     }
