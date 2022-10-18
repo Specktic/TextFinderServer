@@ -5,14 +5,14 @@ public class Bubblesort {
     public Bubblesort(){}
 
     /** sorting by bubblesort method */
-    public static void sort(String[] a) {
+    public static void sort(int[] a) {
         int in;
         int out;
 
         for (out = a.length - 1; out > 1; out--) {
             for (in = 0; in < out; in++) {
-                if (a[in].compareTo(a[in + 1]) > 0) {
-                    String temp = a[in];
+                if (a[in] > a[in + 1]) {
+                    int temp = a[in];
                     a[in] = a[in + 1];
                     a[in + 1] = temp;
                 }
