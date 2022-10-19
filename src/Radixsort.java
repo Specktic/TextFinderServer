@@ -1,9 +1,10 @@
+import java.util.Arrays;
+
 public class Radixsort {
     /** constructor */
     public Radixsort(){}
 
-    public int max(int a[], int n)
-    {
+    public int Max(int a[], int n) {
         int m = a[0];
         for (int i = 1; i < n; i++)
             if (a[i] > m)
@@ -11,32 +12,31 @@ public class Radixsort {
         return m;
     }
 
-    public void radix(int a[], int n) {
-        int m = max(a, n);
-        for (int e = 1; m/e > 0; e *= 10) {
-            countSort(a, n, e);
-        }
-    }
-
-    private void countSort(int a[], int n, int e) {
-        int output[] = new int[0];
+    public void count(int a[], int n, int exp) {
+        int output[] = new int[n];
         int i;
-        int[] count = new int[10];
+        int count[] = new int[10];
+        Arrays.fill(count, 0);
 
-        for (i = 0; i < n; i++) {
-            count [ (a[i]/e) % 10 ] ++;
-        }
+        for (i = 0; i < n; i++)
+            count[(a[i] / exp) % 10]++;
 
-        for (i = 1; i < 10; i++) {
+        for (i = 1; i < 10; i++)
             count[i] += count[i - 1];
-        }
 
         for (i = n - 1; i >= 0; i--) {
-            output[ count[ (a[i]/e) % 10 ] - 1 ] = a[i];
-            count[ (a[i]/e) % 10 ]--;
+            output[count[(a[i] / exp) % 10] - 1] = a[i];
+            count[(a[i] / exp) % 10]--;
         }
-        for (i = 0; i < n; i++) {
+
+        for (i = 0; i < n; i++)
             a[i] = output[i];
-        }
+    }
+
+    public void radix(int arr[], int n) {
+        int m = Max(arr, n);
+
+        for (int exp = 1; m / exp > 0; exp *= 10)
+            count(arr, n, exp);
     }
 }

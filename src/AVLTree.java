@@ -1,12 +1,127 @@
+import java.util.LinkedList;
 import java.util.List;
 
 public class AVLTree {
+
+    /** constructor */
+    public AVLTree(){
+        this.root = null;
+    }
+
+    /** attribute 1, an AVL node */
+    private AVLNode root;
+
     /** static final attribute that defines imbalance tolerance */
     private static final int TOLERANCE = 1;
+
+    /** method for checking if tree is empty */
+    public boolean empty(){
+        return this.root == null;
+    }
 
     /** method for getting height of a node */
     private int height (AVLNode t){
         return t == null ? -1 : t.getHeight();
+    }
+
+    /** public method for calling contain() method */
+    public boolean contain(String word){
+        return this.contain(word, this.root);
+    }
+
+    /** method for checking if tree contains a node with a given element */
+    private boolean contain(String word, AVLNode node){
+        if (node == null){
+            return false;
+        } else {
+            int compare = word.compareTo(node.getWord());
+
+            if (compare < 0){
+                return contain(word, node.getLeft());
+            } else if (compare > 0) {
+                return contain(word, node.getRight());
+            } else {
+                return true;
+            }
+        }
+    }
+
+    /** public method for calling treeMin() method */
+    public AVLNode treeMin() {
+        if (this.empty()) {
+            return null;
+        } else {
+            return this.treeMin(this.root);
+        }
+    }
+
+    private AVLNode treeMin(AVLNode node) {
+        if (this.empty()) {
+            return null;
+        } else {
+            while (node.getLeft() != null) {
+                node = node.getLeft();
+            }
+        } return node;
+    }
+
+    /** public method for calling treeMax() method */
+    public AVLNode treeMax() {
+        if (this.empty()) {
+            return null;
+        } else {
+            return this.treeMax(this.root);
+        }
+    }
+
+    /** method for finding node with the maximum element */
+    private AVLNode treeMax(AVLNode node) {
+        if (node != null) {
+            while (node.getRight() != null){
+                node = node.getRight();
+            }
+        } return node;
+    }
+
+    /** public method for calling insert() method */
+    public void insert (String word){
+        List Occurrence = new LinkedList();
+        Occurrence.add(1);
+        this.root = this.insert(word, Occurrence, this.root);
+    }
+
+    /** method for inserting a node with a given element */
+    public AVLNode insert (String word, List occurrence ,AVLNode node) {
+        if ( node == null) {
+            List Occurrence = new LinkedList();
+            Occurrence.add(1);
+            return new AVLNode(word, Occurrence, null, null);
+        }
+
+        int compare = word.compareTo(node.getWord());
+
+        if (compare < 0){
+            List Occurrence = new LinkedList();
+            Occurrence.add(1);
+            node.setLeft(this.insert(word, Occurrence, node.getLeft()));
+        } else if (compare > 0){
+            List Occurrence = new LinkedList();
+            Occurrence.add(1);
+            node.setRight(this.insert(word, Occurrence, node.getRight()));
+        } else {
+            node.getOccurrence().add(1);
+        }
+        return balance(node);
+    }
+
+    /** public method for calling delete() method */
+    public void delete(String word) {
+        this.root = this.delete(word, this.root);
+    }
+
+    /** method for deleting a node with a given element */
+    private AVLNode delete(String word, AVLNode node) {
+        return null;
     }
 
     /** method for balancing the tree*/
@@ -134,6 +249,8 @@ public class AVLTree {
         public void setRight (AVLNode right) {
             this.right = right;
         }
+
+
     }
 }
 

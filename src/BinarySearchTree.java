@@ -11,10 +11,6 @@ public class BinarySearchTree {
     /** attribute 1, a binary node */
     private BinaryNode root;
 
-    private BinaryNode getRoot(){
-        return this.root;
-    }
-
     /** method for checking if tree is empty */
     public boolean empty(){
         return this.root == null;
@@ -24,6 +20,7 @@ public class BinarySearchTree {
     public boolean contain(String word){
         return this.contain(word, this.root);
     }
+
     /** method for checking if tree contains a node with a given element */
     private boolean contain(String word, BinaryNode node){
         if (node == null){
@@ -79,8 +76,6 @@ public class BinarySearchTree {
         } return node;
     }
 
-
-
     /** public method for calling insert() method */
     public void insert(String word) {
         List Occurrence = new LinkedList();
@@ -112,10 +107,12 @@ public class BinarySearchTree {
         return node;
     }
 
+    /** public method for calling delete() method */
     public void delete(String word) {
         this.root = this.delete(word, this.root);
     }
 
+    /** method for deleting a node with a given element */
     private BinaryNode delete(String word, BinaryNode node) {
 
         if (node == null){
