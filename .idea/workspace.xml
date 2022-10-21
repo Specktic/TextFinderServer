@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- separate SSocket's communication system into methods">
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- add contain(), treeMin() and treMax() methods to AVLTree for future delete() method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AVLTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Radixsort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Radixsort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +38,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/mavic/Desktop/Marco/Datos/Proyectos/Pr2/TextFinderServer",
     "node.js.detected.package.eslint": "true",
@@ -89,7 +86,7 @@
       <workItem from="1666028958054" duration="4913000" />
       <workItem from="1666054518432" duration="7116000" />
       <workItem from="1666110752292" duration="1133000" />
-      <workItem from="1666114760372" duration="13806000" />
+      <workItem from="1666114760372" duration="19173000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -259,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666122053101</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="- add contain(), treeMin() and treMax() methods to AVLTree for future delete() method">
+      <created>1666223254094</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1666223254094</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +305,7 @@
     <MESSAGE value="- implement untested radix sort for sorting by word count" />
     <MESSAGE value="- move library to server&#10;- move library management methods to server&#10;- add new server class" />
     <MESSAGE value="- separate SSocket's communication system into methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="- separate SSocket's communication system into methods" />
+    <MESSAGE value="- add contain(), treeMin() and treMax() methods to AVLTree for future delete() method" />
+    <option name="LAST_COMMIT_MESSAGE" value="- add contain(), treeMin() and treMax() methods to AVLTree for future delete() method" />
   </component>
 </project>

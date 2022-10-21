@@ -14,6 +14,11 @@ public class AVLTree {
     /** static final attribute that defines imbalance tolerance */
     private static final int TOLERANCE = 1;
 
+    /** getter for root */
+    public AVLNode getRoot() {
+        return root;
+    }
+
     /** method for checking if tree is empty */
     public boolean empty(){
         return this.root == null;
@@ -55,6 +60,7 @@ public class AVLTree {
         }
     }
 
+    /** method for finding node with the minimum element */
     private AVLNode treeMin(AVLNode node) {
         if (this.empty()) {
             return null;
@@ -121,10 +127,25 @@ public class AVLTree {
 
     /** method for deleting a node with a given element */
     private AVLNode delete(String word, AVLNode node) {
-        return null;
+        if (node == null){
+            return node;}
+
+        int compare = word.compareTo(node.getWord());
+
+        if (compare < 0) {
+            node.setLeft(delete(word, node.getLeft()));
+        } else if (compare > 0) {
+            node.setRight(delete(word, node.getRight()));
+        } else if (node.getLeft() != null && node.getRight() != null) {
+            node.setWord(treeMin(node.getRight()).getWord());
+            node.setRight(delete(node.getWord(), node.getRight()));
+        } else {
+            node = node.getLeft() != null ? node.getLeft() : node.getRight();
+        }
+        return balance(node);
     }
 
-    /** method for balancing the tree*/
+    /** method for balancing the tree */
     private AVLNode balance (AVLNode t){
         if (t == null){
             return null;
