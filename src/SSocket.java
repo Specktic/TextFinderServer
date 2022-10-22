@@ -5,7 +5,7 @@ import java.net.*;
 
 public class SSocket {
 
-    /** constructor */
+    /** Class constructor */
     public SSocket(){
         try{
             /* a server socket is created for a given port */
@@ -35,7 +35,7 @@ public class SSocket {
     public ServerSocket getSs() {return ss;}
     public void setSs(ServerSocket ss) {this.ss = ss;}
 
-    public void receive() throws IOException {
+    public String  receive() throws IOException {
         /* waits for client to read data */
         getCs().setSoLinger(true, 10);
 
@@ -45,7 +45,9 @@ public class SSocket {
         /* object to be read is created and assigned data from the flux */
         SocketData auxIn = new SocketData("");
         auxIn.readObject (bufferIn);
+
         System.out.println ("received: " + auxIn);
+        return auxIn.toString();
     }
 
     public void send() throws IOException {

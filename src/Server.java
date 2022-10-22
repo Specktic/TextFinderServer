@@ -2,16 +2,29 @@ import java.io.IOException;
 
 public class Server {
     public static void main(String[] args) throws IOException {
-        AVLTree avlTree = new AVLTree();
-        avlTree.insert("a");
-        avlTree.insert("b");
-        avlTree.insert("c");
-        avlTree.insert("d");
-        avlTree.insert("e");
-        avlTree.insert("f");
-        avlTree.insert("g");
-        avlTree.insert("h");
+        SSocket ss = new SSocket();
+        AVLTree avl = new AVLTree();
+        BinarySearchTree bst = new BinarySearchTree();
 
-        System.out.println(avlTree.getRoot().getWord());
+        bst.insert("river");
+        bst.insert("nomination");
+        bst.insert("dorm");
+        bst.insert("nonsense");
+        bst.insert("by");
+        bst.insert("tycoon");
+
+        avl.insert("river");
+        avl.insert("nomination");
+        avl.insert("dorm");
+        avl.insert("nonsense");
+        avl.insert("by");
+        avl.insert("tycoon");
+
+        String search = ss.receive();
+
+        System.out.println(avl.contain(search));
+        System.out.println(bst.contain(search));
+
+        ss.shutDown();
     }
 }
