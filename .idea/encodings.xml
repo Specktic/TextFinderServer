@@ -2,6 +2,8 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Texts/The Road Not Taken.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/TextsLibrary/The Road Not Taken.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/The Road Not Taken.txt" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/Texts/The Road Not Taken.txt" charset="windows-1252" />
   </component>
 </project>
