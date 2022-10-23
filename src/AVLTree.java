@@ -19,22 +19,22 @@ public class AVLTree {
         return root;
     }
 
-    /** method for checking if tree is empty */
+    /** Checks if the tree is empty */
     public boolean empty(){
         return this.root == null;
     }
 
-    /** method for getting height of a node */
+    /** Gets the height of a node */
     private int height (AVLNode t){
         return t == null ? -1 : t.getHeight();
     }
 
-    /** public method for calling contain() method */
+    /** Calls contain() method */
     public boolean contain(String word){
         return this.contain(word, this.root);
     }
 
-    /** method for checking if tree contains a node with a given element */
+    /** Checks if the tree contains a node with a given element */
     private boolean contain(String word, AVLNode node){
         if (node == null){
             return false;
@@ -51,7 +51,7 @@ public class AVLTree {
         }
     }
 
-    /** public method for calling treeMin() method */
+    /** Calls treeMin() method */
     public AVLNode treeMin() {
         if (this.empty()) {
             return null;
@@ -60,7 +60,7 @@ public class AVLTree {
         }
     }
 
-    /** method for finding node with the minimum element */
+    /** Finds node with the minimum element */
     private AVLNode treeMin(AVLNode node) {
         if (this.empty()) {
             return null;
@@ -71,7 +71,7 @@ public class AVLTree {
         } return node;
     }
 
-    /** public method for calling treeMax() method */
+    /** Calls treeMax() method */
     public AVLNode treeMax() {
         if (this.empty()) {
             return null;
@@ -80,7 +80,7 @@ public class AVLTree {
         }
     }
 
-    /** method for finding node with the maximum element */
+    /** Finds node with the maximum element */
     private AVLNode treeMax(AVLNode node) {
         if (node != null) {
             while (node.getRight() != null){
@@ -89,14 +89,14 @@ public class AVLTree {
         } return node;
     }
 
-    /** public method for calling insert() method */
+    /** Calls insert() method */
     public void insert (String word){
         List Occurrence = new LinkedList();
         Occurrence.add(1);
         this.root = this.insert(word, Occurrence, this.root);
     }
 
-    /** method for inserting a node with a given element */
+    /** Inserts a node with a given element */
     public AVLNode insert (String word, List occurrence ,AVLNode node) {
         if ( node == null) {
             List Occurrence = new LinkedList();
@@ -120,12 +120,12 @@ public class AVLTree {
         return balance(node);
     }
 
-    /** public method for calling delete() method */
+    /** Calls delete() method */
     public void delete(String word) {
         this.root = this.delete(word, this.root);
     }
 
-    /** method for deleting a node with a given element */
+    /** Deletes a node with a given element */
     private AVLNode delete(String word, AVLNode node) {
         if (node == null){
             return node;}
@@ -145,7 +145,7 @@ public class AVLTree {
         return balance(node);
     }
 
-    /** method for balancing the tree */
+    /** Balances the tree */
     private AVLNode balance (AVLNode t){
         if (t == null){
             return null;
@@ -167,7 +167,7 @@ public class AVLTree {
         return t;
     }
 
-    /** method for performing a single left rotation */
+    /** Performs a single left rotation */
     private AVLNode rotateLeft (AVLNode m){
         AVLNode m1 = m.getLeft();
         m.setLeft(m1.getRight());
@@ -177,15 +177,9 @@ public class AVLTree {
         return m1;
     }
 
-    /** method for performing a double left rotation */
-    private AVLNode doubleLeft (AVLNode m){
-        m.setLeft(rotateRight(m.getLeft()));
-        return rotateLeft(m);
-    }
-
-    /** method for performing a single right rotation */
+    /** Performs a single right rotation */
     private AVLNode rotateRight (AVLNode m){
-        AVLNode m1 = m.getRight();
+        AVLNode m1 = m.getLeft();
         m.setRight(m1.getLeft());
         m1.setLeft(m);
         m.setHeight(Math.max(height(m.getRight()), height(m.getLeft())) + 1);
@@ -193,7 +187,13 @@ public class AVLTree {
         return m1;
     }
 
-    /** method for performing a double right rotation */
+    /** Performs a double left rotation */
+    private AVLNode doubleLeft (AVLNode m){
+        m.setLeft(rotateRight(m.getLeft()));
+        return rotateLeft(m);
+    }
+
+    /** Performs a double right rotation */
     private AVLNode doubleRight (AVLNode m){
         m.setRight(rotateLeft(m.getRight()));
         return rotateLeft(m);
@@ -202,12 +202,12 @@ public class AVLTree {
     /** AVL node for AVL tree */
     public static class AVLNode{
 
-        /** constructor 1 */
+        /** Class constructor 1 */
         public AVLNode(String word, List occurrence){
             this(word, occurrence, null, null);
         }
 
-        /** constructor 2 */
+        /** Class constructor 2 */
         public AVLNode(String word, List occurrence, AVLNode left, AVLNode right){
             this.word = word;
             this.occurrence = occurrence;
@@ -216,22 +216,22 @@ public class AVLTree {
             this.height = 0;
         }
 
-        /** attribute 1, a string */
+        /** Attribute 1, a string */
         private String word;
 
-        /** attribute 2, a List */
+        /** Attribute 2, a List */
         private List occurrence;
 
-        /** attribute 3, an int */
+        /** Attribute 3, an int */
         private int height;
 
-        /** attribute 4, an AVL node */
+        /** Attribute 4, an AVL node */
         private AVLNode left;
 
-        /** attribute 5, an AVL node */
+        /** Attribute 5, an AVL node */
         private AVLNode right;
 
-        /** getter and setter methods for word attribute */
+        /** Getter and setter methods for word attribute */
         public String getWord () {
             return word;
         }
@@ -239,7 +239,7 @@ public class AVLTree {
             this.word = word;
         }
 
-        /** getter and setter methods for occurrence attribute */
+        /** Getter and setter methods for occurrence attribute */
         public List getOccurrence () {
             return occurrence;
         }
@@ -247,7 +247,7 @@ public class AVLTree {
             this.occurrence = occurrence;
         }
 
-        /** getter and setter methods for height attribute */
+        /** Getter and setter methods for height attribute */
         public int getHeight () {
             return height;
         }
@@ -255,7 +255,7 @@ public class AVLTree {
             this.height = height;
         }
 
-        /** getter and setter methods for left attribute */
+        /** Getter and setter methods for left attribute */
         public AVLNode getLeft () {
             return left;
         }
@@ -263,7 +263,7 @@ public class AVLTree {
             this.left = left;
         }
 
-        /** getter and setter methods for right attribute */
+        /** Getter and setter methods for right attribute */
         public AVLNode getRight () {
             return right;
         }

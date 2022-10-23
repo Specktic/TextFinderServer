@@ -35,7 +35,7 @@ public class SSocket {
     public ServerSocket getSs() {return ss;}
     public void setSs(ServerSocket ss) {this.ss = ss;}
 
-    public String  receive() throws IOException {
+    public String receive() throws IOException {
         /* waits for client to read data */
         getCs().setSoLinger(true, 10);
 

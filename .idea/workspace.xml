@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- move sorting algorithms into a single class for convenience">
-      <change afterPath="$PROJECT_DIR$/src/FileProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- make FileProcessor class por file reading">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AVLTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +95,7 @@
       <workItem from="1666384418035" duration="594000" />
       <workItem from="1666391471146" duration="1876000" />
       <workItem from="1666413518662" duration="6928000" />
-      <workItem from="1666451884211" duration="3958000" />
+      <workItem from="1666451884211" duration="11104000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -285,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666415686139</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="- make FileProcessor class por file reading">
+      <created>1666464213677</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1666464213677</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +311,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- add SocketData class for data storage&#10;- add data output flux to server socket for receiving data from client" />
     <MESSAGE value="- receive and read data from the client" />
     <MESSAGE value="- allow server to reply to the client" />
     <MESSAGE value="- add AVL tree class and node&#10;- add binary search tree and node" />
@@ -328,6 +335,7 @@
     <MESSAGE value="- add contain(), treeMin() and treMax() methods to AVLTree for future delete() method" />
     <MESSAGE value="- add delete() method to AVLTree" />
     <MESSAGE value="- move sorting algorithms into a single class for convenience" />
-    <option name="LAST_COMMIT_MESSAGE" value="- move sorting algorithms into a single class for convenience" />
+    <MESSAGE value="- make FileProcessor class por file reading" />
+    <option name="LAST_COMMIT_MESSAGE" value="- make FileProcessor class por file reading" />
   </component>
 </project>
