@@ -10,14 +10,14 @@ public class FileProcessor {
     private File library = new File("TextsLibrary");
     private String[] contents;
 
-    public void processTXT(String fileName) {
+    public void process() {
 
         contents = library.list();
         BinarySearchTree binarySearchTree = new BinarySearchTree();
         int i = 0;
 
         if (contents != null) {
-            while (i > contents.length) {
+            while (i < contents.length) {
 
                 File file = new File("TextsLibrary" + "\\" + contents[i]);
 
@@ -29,28 +29,27 @@ public class FileProcessor {
 
                         while (sc.hasNext()) {
                             String word = sc.next();
-                            System.out.println(word);
-
                             binarySearchTree.insert(word);
-
                         }
                         i++;
+
                     } else if (contents[i].contains(".pdf")) {
                         i++;
+
                     } else if (contents[i].contains(".docx")){
                         i++;
+
                     } else {
                         i++;
+
                     }
 
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
+            setBST(binarySearchTree);
         }
-
-        setBST(binarySearchTree);
-
     }
 
     public BinarySearchTree getBST() {
