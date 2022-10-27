@@ -42,6 +42,9 @@ public class SSocket {
                         String word = receive();
 
                         if (fp.getBST().contain(word)) {
+                            System.out.println(fp.getBST().getNodeWord());
+                            System.out.println(fp.getBST().getNodeLocation());
+
                             System.out.println("yeah");
                         }
                         else {

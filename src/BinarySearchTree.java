@@ -1,5 +1,4 @@
 import java.util.LinkedList;
-import java.util.List;
 
 public class BinarySearchTree {
 
@@ -13,6 +12,22 @@ public class BinarySearchTree {
 
     /** attribute 2, an int */
     private int comparisons = 0;
+
+    /** attribute 3, a String */
+    private String nodeWord;
+
+    /** attribute 3, a String */
+    private String nodeLocation;
+
+    /** Return the stored word */
+    public String getNodeWord() {
+        return nodeWord;
+    }
+
+    /** Return the stored location */
+    public String getNodeLocation() {
+        return nodeLocation;
+    }
 
     /** Returns number of comparisons made */
     public int getComparisons() {
@@ -35,7 +50,7 @@ public class BinarySearchTree {
     }
 
     /** method for checking if tree contains a node with a given element */
-    private boolean contain(String word, BinaryNode node){
+    private boolean contain (String word, BinaryNode node) {
         if (node == null){
             return false;
         } else {
@@ -46,13 +61,17 @@ public class BinarySearchTree {
             } else if (compare > 0) {
                 return contain(word, node.getRight());
             } else {
+                nodeWord = word;
+                nodeLocation = node.getOccurrence().toString();
                 return true;
             }
         }
     }
 
+
+
     /** public method for calling treeMin() method */
-    public BinaryNode treeMin() {
+    public BinaryNode treeMin () {
         if (this.empty()) {
             return null;
         } else {
@@ -61,7 +80,7 @@ public class BinarySearchTree {
     }
 
     /** method for finding node with the minimum element */
-    private BinaryNode treeMin(BinaryNode node) {
+    private BinaryNode treeMin (BinaryNode node) {
         if (this.empty()) {
             return null;
         } else {
@@ -72,7 +91,7 @@ public class BinarySearchTree {
     }
 
     /** public method for calling treeMax() method */
-    public BinaryNode treeMax() {
+    public BinaryNode treeMax () {
         if (this.empty()) {
             return null;
         } else {
@@ -81,7 +100,7 @@ public class BinarySearchTree {
     }
 
     /** method for finding node with the maximum element */
-    private BinaryNode treeMax(BinaryNode node) {
+    private BinaryNode treeMax (BinaryNode node) {
         if (node != null) {
             while (node.getRight() != null){
                 node = node.getRight();
@@ -90,12 +109,12 @@ public class BinarySearchTree {
     }
 
     /** public method for calling insert() method */
-    public void insert(String word, String location) {
+    public void insert (String word, String location) {
         this.root = this.insert(word, location, this.root);
     }
 
     /** method for inserting a node with a given element */
-    private BinaryNode insert(String word, String location, BinaryNode node) {
+    private BinaryNode insert (String word, String location, BinaryNode node) {
         if ( node == null){
             return new BinaryNode(word, location,null, null);
         }
@@ -107,18 +126,18 @@ public class BinarySearchTree {
         } else if (compare > 0){
             node.setRight(this.insert(word, location, node.getRight()));
         } else {
-            node.getOccurrence().add(1);
+            node.occurrence.add(location);
         }
         return node;
     }
 
     /** public method for calling delete() method */
-    public void delete(String word) {
+    public void delete (String word) {
         this.root = this.delete(word, this.root);
     }
 
     /** method for deleting a node with a given element */
-    private BinaryNode delete(String word, BinaryNode node) {
+    private BinaryNode delete (String word, BinaryNode node) {
 
         if (node == null){
             return node;}
@@ -142,12 +161,12 @@ public class BinarySearchTree {
     public static class BinaryNode {
 
         /** constructor 1 */
-        public BinaryNode(String word, String occurrence){
+        public BinaryNode (String word, String occurrence){
             this(word, occurrence, null, null);
         }
 
         /** constructor 2 */
-        public BinaryNode(String word, String location, BinaryNode left, BinaryNode right){
+        public BinaryNode (String word, String location, BinaryNode left, BinaryNode right){
 
             this.word = word;
 
