@@ -11,6 +11,19 @@ public class BinarySearchTree {
     /** attribute 1, a binary node */
     private BinaryNode root;
 
+    /** attribute 2, an int */
+    private int comparisons = 0;
+
+    /** Returns number of comparisons made */
+    public int getComparisons() {
+        return comparisons;
+    }
+
+    /** Modifies the comparisons attribute */
+    public void setComparisons(int comparisons) {
+        this.comparisons = comparisons;
+    }
+
     /** method for checking if tree is empty */
     public boolean empty(){
         return this.root == null;
@@ -77,30 +90,22 @@ public class BinarySearchTree {
     }
 
     /** public method for calling insert() method */
-    public void insert(String word) {
-        List Occurrence = new LinkedList();
-        Occurrence.add(1);
-        this.root = this.insert(word, Occurrence, this.root);
+    public void insert(String word, String location) {
+        this.root = this.insert(word, location, this.root);
     }
 
     /** method for inserting a node with a given element */
-    private BinaryNode insert(String word, List occurrence, BinaryNode node) {
+    private BinaryNode insert(String word, String location, BinaryNode node) {
         if ( node == null){
-            List Occurrence = new LinkedList();
-            Occurrence.add(1);
-            return new BinaryNode(word, Occurrence ,null, null);
+            return new BinaryNode(word, location,null, null);
         }
 
         int compare = word.compareTo(node.getWord());
 
         if (compare < 0){
-            List Occurrence = new LinkedList();
-            Occurrence.add(1);
-            node.setLeft(this.insert(word, Occurrence, node.getLeft()));
+            node.setLeft(this.insert(word, location, node.getLeft()));
         } else if (compare > 0){
-            List Occurrence = new LinkedList();
-            Occurrence.add(1);
-            node.setRight(this.insert(word, Occurrence, node.getRight()));
+            node.setRight(this.insert(word, location, node.getRight()));
         } else {
             node.getOccurrence().add(1);
         }
@@ -137,14 +142,21 @@ public class BinarySearchTree {
     public static class BinaryNode {
 
         /** constructor 1 */
-        public BinaryNode(String word, List occurrence){
+        public BinaryNode(String word, String occurrence){
             this(word, occurrence, null, null);
         }
 
         /** constructor 2 */
-        public BinaryNode(String word, List occurrence, BinaryNode left, BinaryNode right){
+        public BinaryNode(String word, String location, BinaryNode left, BinaryNode right){
+
             this.word = word;
-            this.occurrence = occurrence;
+
+            if (this.occurrence == null) {
+                this.occurrence = new LinkedList();
+            } else {
+
+            }
+
             this.left = left;
             this.right = right;
         }
@@ -152,8 +164,8 @@ public class BinarySearchTree {
         /** attribute 1, a string */
         private String word;
 
-        /** attribute 2, a List */
-        private List occurrence;
+        /** attribute 2, a Linked List */
+        private LinkedList occurrence;
 
         /** attribute 3, a binary node */
         private BinaryNode left;
@@ -170,14 +182,14 @@ public class BinarySearchTree {
         }
 
         /** getter and setter methods for occurrence attribute */
-        public List getOccurrence () {
+        public LinkedList getOccurrence () {
             return occurrence;
         }
-        public void setOccurrence (List occurrence) {
+        public void setOccurrence (LinkedList occurrence) {
             this.occurrence = occurrence;
         }
 
-        /** getter and setter methods for left attribute */
+        /** getter and setter methods for left node attribute */
         public BinaryNode getLeft() {
             return left;
         }
@@ -185,7 +197,7 @@ public class BinarySearchTree {
             this.left = left;
         }
 
-        /** getter and setter methods for left attribute */
+        /** getter and setter methods for right node attribute */
         public BinaryNode getRight() {
             return right;
         }

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- allow File processor to read files according to their type">
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- add search functionality through a binary search tree">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextFinderServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TextFinderServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/Storage/AVLTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
     </list>
@@ -35,22 +38,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mavic/Desktop/Marco/Datos/Proyectos/Pr2/TextFinderServer/TextsLibrary&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3816092&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/mavic/Desktop/Marco/Datos/Proyectos/Pr2/TextFinderServer/TextsLibrary",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3816092",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mavic\Desktop\Marco\Datos\Proyectos\Pr2\TextFinderServer\TextsLibrary" />
@@ -59,6 +63,7 @@
       <recent name="C:\Users\mavic\Desktop\Marco\Datos\Proyectos\Pr2\TextFinderServer\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mavic\Desktop\Marco\Datos\Proyectos\Pr2\TextFinderServer\Storage" />
       <recent name="C:\Users\mavic\Desktop\Marco\Datos\Proyectos\Pr2\TextFinderServer" />
     </key>
   </component>
@@ -95,7 +100,10 @@
       <workItem from="1666391471146" duration="1876000" />
       <workItem from="1666413518662" duration="6928000" />
       <workItem from="1666451884211" duration="11158000" />
-      <workItem from="1666490229046" duration="4441000" />
+      <workItem from="1666490229046" duration="4993000" />
+      <workItem from="1666505379677" duration="519000" />
+      <workItem from="1666757198274" duration="93000" />
+      <workItem from="1666838023251" duration="2988000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -300,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666486289139</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="- add search functionality through a binary search tree">
+      <created>1666495499426</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1666495499426</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +333,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- allow server to reply to the client" />
     <MESSAGE value="- add AVL tree class and node&#10;- add binary search tree and node" />
     <MESSAGE value="- give basic functionality to AVL node" />
     <MESSAGE value="- implement balance and rotation to AVL tree for further development" />
@@ -343,6 +357,7 @@
     <MESSAGE value="- move sorting algorithms into a single class for convenience" />
     <MESSAGE value="- make FileProcessor class por file reading" />
     <MESSAGE value="- allow File processor to read files according to their type" />
-    <option name="LAST_COMMIT_MESSAGE" value="- allow File processor to read files according to their type" />
+    <MESSAGE value="- add search functionality through a binary search tree" />
+    <option name="LAST_COMMIT_MESSAGE" value="- add search functionality through a binary search tree" />
   </component>
 </project>

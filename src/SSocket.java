@@ -59,6 +59,7 @@ public class SSocket {
                     e.printStackTrace();
                 }
             }
+
         }
         catch (IOException e) {
             e.printStackTrace();

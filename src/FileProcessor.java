@@ -29,7 +29,7 @@ public class FileProcessor {
 
                         while (sc.hasNext()) {
                             String word = sc.next();
-                            binarySearchTree.insert(word);
+                            binarySearchTree.insert(word, contents[i]);
                         }
                         i++;
 

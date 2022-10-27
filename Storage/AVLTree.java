@@ -1,3 +1,4 @@
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,6 +11,9 @@ public class AVLTree {
 
     /** attribute 1, an AVL node */
     private AVLNode root;
+
+    /** attribute 2, an int */
+    private int comparisons;
 
     /** static final attribute that defines imbalance tolerance */
     private static final int TOLERANCE = 1;
@@ -273,3 +277,4 @@ public class AVLTree {
 
     }
 }
+
