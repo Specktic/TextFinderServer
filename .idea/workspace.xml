@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- add search functionality through a binary search tree">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextFinderServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TextFinderServer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/Storage/AVLTree.java" afterDir="false" />
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- Rework BinaryNode for implementing occurrence list functionality">
       <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +97,7 @@
       <workItem from="1666490229046" duration="4993000" />
       <workItem from="1666505379677" duration="519000" />
       <workItem from="1666757198274" duration="93000" />
-      <workItem from="1666838023251" duration="2988000" />
+      <workItem from="1666838023251" duration="3591000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -315,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666495499426</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="- Rework BinaryNode for implementing occurrence list functionality">
+      <created>1666841292190</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1666841292190</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +334,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- add AVL tree class and node&#10;- add binary search tree and node" />
     <MESSAGE value="- give basic functionality to AVL node" />
     <MESSAGE value="- implement balance and rotation to AVL tree for further development" />
     <MESSAGE value="- add getter and setter method for word and occurrence attribute" />
@@ -358,6 +358,7 @@
     <MESSAGE value="- make FileProcessor class por file reading" />
     <MESSAGE value="- allow File processor to read files according to their type" />
     <MESSAGE value="- add search functionality through a binary search tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="- add search functionality through a binary search tree" />
+    <MESSAGE value="- Rework BinaryNode for implementing occurrence list functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Rework BinaryNode for implementing occurrence list functionality" />
   </component>
 </project>

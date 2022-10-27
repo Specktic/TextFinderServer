@@ -153,8 +153,9 @@ public class BinarySearchTree {
 
             if (this.occurrence == null) {
                 this.occurrence = new LinkedList();
+                occurrence.add(location);
             } else {
-
+                this.occurrence.add(location);
             }
 
             this.left = left;
