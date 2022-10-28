@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- Move unused data structures to storage directory&#10;- Move unused algorithms to storage directory&#10;- Rename Sorter class to QuickSort">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuickSort.java" afterDir="false" />
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- Formally document QuickSort for Javadoc generation">
+      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SocketData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SocketData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,7 @@
       <workItem from="1666838023251" duration="3707000" />
       <workItem from="1666841781238" duration="4647000" />
       <workItem from="1666914565957" duration="3844000" />
-      <workItem from="1666921485250" duration="2094000" />
+      <workItem from="1666921485250" duration="2590000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -343,7 +341,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666922042720</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="- Formally document BinarySearchTree for Javadoc generation">
+      <created>1666924204672</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1666924204672</updated>
+    </task>
+    <task id="LOCAL-00036" summary="- Formally document QuickSort for Javadoc generation">
+      <created>1666924434371</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1666924434371</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,8 +373,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- properly encapsulate AVLNode class" />
-    <MESSAGE value="- adapt AVLTree class because of AVLNode encapsulation" />
     <MESSAGE value="- give basic functionality to BinaryNode" />
     <MESSAGE value="- properly encapsulate BinaryNode class" />
     <MESSAGE value="- implement BinarySearchTree with crude empty(), contain() and insert() methods" />
@@ -386,6 +396,8 @@
     <MESSAGE value="- Modify file processor to include word location" />
     <MESSAGE value="- add storage attributes to BinarySearchTree class for returning occurrence list when searching" />
     <MESSAGE value="- Move unused data structures to storage directory&#10;- Move unused algorithms to storage directory&#10;- Rename Sorter class to QuickSort" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Move unused data structures to storage directory&#10;- Move unused algorithms to storage directory&#10;- Rename Sorter class to QuickSort" />
+    <MESSAGE value="- Formally document BinarySearchTree for Javadoc generation" />
+    <MESSAGE value="- Formally document QuickSort for Javadoc generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Formally document QuickSort for Javadoc generation" />
   </component>
 </project>

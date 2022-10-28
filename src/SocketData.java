@@ -1,40 +1,39 @@
 import java.io.*;
 
-/** data to be sent to server */
 public class SocketData implements Serializable{
-    /** constructor */
+    /** Class constructor */
     public SocketData(String data){
         if (data != null){
-            l = data.length();
-            d = data;
+            this.len = data.length();
+            this.data = data;
         }
     }
-    /** attribute 1, a string */
-    private String d;
+    /** Attribute 1, a string */
+    private String data;
 
-    /** attribute 2, an int */
-    private int l;
+    /** Attribute 2, an int */
+    private int len;
 
-    /** method for reading data fluxes as strings */
+    /** Reads an incoming data flux as a string */
     public String toString(){
-        return d;
+        return data;
     }
 
-    /** method for writing attributes as a DataOutputStream */
+    /** Writes the d attribute to the output data flux */
     public void writeObject(java.io.DataOutputStream out) throws IOException{
-        out.writeInt (l+1);
-        out.writeBytes (d);
+        out.writeInt (len + 1);
+        out.writeBytes (data);
         out.writeByte ('\0');
     }
 
-    /** method for reading attributes as a DataOutputStream */
+    /** Reads the byte array from the data input stream */
     public void readObject(java.io.DataInputStream in) throws IOException{
-        l = in.readInt() - 1;
+        len = in.readInt() - 1;
         byte [] aux = null;
 
-        aux = new byte[l];            // byte array size
-        in.read(aux, 0, l);       // Reads bytes
-        d = new String (aux);         // turns into a string
+        aux = new byte[len];          // byte array size
+        in.read(aux, 0, len);     // Reads bytes
+        data = new String (aux);      // turns into a string
         in.read(aux,0,1);     // reads \0
     }
 }
