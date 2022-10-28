@@ -6,9 +6,10 @@ import java.nio.file.Paths;
 
 public class LibraryEditor {
 
-    /** constructor */
+    /** Class constructor */
     public LibraryEditor(){}
 
+    /** Adds the specified file to the TextsLibrary directory */
     public void add(File file) throws IOException {
         if (file != null){
             Path textName = Paths.get(String.valueOf(file));
@@ -30,4 +31,10 @@ public class LibraryEditor {
             System.out.println("no file selected");
         }
     }
+
+    /** Removes a specified file from the TextsLibrary directory */
+    public void remove(File file){
+
+    }
+
 }

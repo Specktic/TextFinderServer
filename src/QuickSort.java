@@ -1,15 +1,15 @@
 public class QuickSort {
 
-        /** constructor */
+        /** Class constructor */
         public QuickSort(){}
 
-        /** attribute 1, a string array */
+        /** Attribute 1, a string array */
         private String[] words;
 
-        /** attribute 2, an int */
+        /** Attribute 2, an int */
         private int size;
 
-        /** public sorting method */
+        /** Calls the quicksort method */
         public void quicksort(String names[]){
             if (names == null || names.length == 0){
                 return;
@@ -19,7 +19,7 @@ public class QuickSort {
             quicksort(0, size - 1);
         }
 
-        /** quicksort method */
+        /** Sorts a string array using a Quicksort algorithm */
         private void quicksort(int low, int high) {
             int i = low;
             int j = high;

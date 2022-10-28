@@ -11,16 +11,16 @@ public class FileProcessor {
         this.library = new File("TextsLibrary");
     }
 
-    /** attribute 1, a binary search tree */
+    /** Attribute 1, a binary search tree */
     private BinarySearchTree bst;
 
-    /** attribute 2, a binary file */
+    /** Attribute 2, a binary file */
     private File library;
 
-    /** attribute 3, a string array */
+    /** Attribute 3, a string array */
     private String[] contents;
 
-    /** parses every document from the library directory and loads their individual words into a tree */
+    /** Parses every document from the library directory and loads their individual words into a tree */
     public void process() {
 
         contents = library.list();
