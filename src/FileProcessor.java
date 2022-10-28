@@ -4,8 +4,6 @@ import java.io.FileReader;
 import java.util.Scanner;
 
 public class FileProcessor {
-
-    private AVLTree avl = new AVLTree();
     private BinarySearchTree bst = new BinarySearchTree();
     private File library = new File("TextsLibrary");
     private String[] contents;
@@ -60,11 +58,4 @@ public class FileProcessor {
         this.bst = binarySearchTree;
     }
 
-    public AVLTree getAvl() {
-        return avl;
-    }
-
-    public void setAvl (AVLTree avlTree) {
-        this.avl = avlTree;
-    }
 }

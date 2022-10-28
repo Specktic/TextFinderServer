@@ -34,11 +34,6 @@ public class BinarySearchTree {
         return comparisons;
     }
 
-    /** Modifies the comparisons attribute */
-    public void setComparisons(int comparisons) {
-        this.comparisons = comparisons;
-    }
-
     /** method for checking if tree is empty */
     public boolean empty(){
         return this.root == null;
@@ -158,7 +153,7 @@ public class BinarySearchTree {
     }
 
     /** binary node for binary search tree */
-    public static class BinaryNode {
+    private static class BinaryNode {
 
         /** constructor 1 */
         public BinaryNode (String word, String occurrence){
@@ -211,15 +206,15 @@ public class BinarySearchTree {
 
         /** getter and setter methods for left node attribute */
         public BinaryNode getLeft() {
-            return left;
+            return this.left;
         }
-        public void setLeft(BinaryNode left) {
-            this.left = left;
+        public void setLeft(BinaryNode node) {
+            this.left = node;
         }
 
         /** getter and setter methods for right node attribute */
         public BinaryNode getRight() {
-            return right;
+            return this.right;
         }
         public void setRight(BinaryNode right) {
             this.right = right;
