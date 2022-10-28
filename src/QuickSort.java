@@ -10,7 +10,7 @@ public class QuickSort {
         private int size;
 
         /** public sorting method */
-        public void sort(String names[]){
+        public void quicksort(String names[]){
             if (names == null || names.length == 0){
                 return;
             }

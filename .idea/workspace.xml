@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- add storage attributes to BinarySearchTree class for returning occurrence list when searching">
-      <change afterPath="$PROJECT_DIR$/Storage/BubbleSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Storage/RadixSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- Move unused data structures to storage directory&#10;- Move unused algorithms to storage directory&#10;- Rename Sorter class to QuickSort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuickSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +103,7 @@
       <workItem from="1666838023251" duration="3707000" />
       <workItem from="1666841781238" duration="4647000" />
       <workItem from="1666914565957" duration="3844000" />
-      <workItem from="1666921485250" duration="418000" />
+      <workItem from="1666921485250" duration="2094000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -341,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666847786839</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="- Move unused data structures to storage directory&#10;- Move unused algorithms to storage directory&#10;- Rename Sorter class to QuickSort">
+      <created>1666922042720</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1666922042720</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +361,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- add getter and setter method for word and occurrence attribute" />
     <MESSAGE value="- properly encapsulate AVLNode class" />
     <MESSAGE value="- adapt AVLTree class because of AVLNode encapsulation" />
     <MESSAGE value="- give basic functionality to BinaryNode" />
@@ -384,6 +385,7 @@
     <MESSAGE value="- Rework BinaryNode for implementing occurrence list functionality" />
     <MESSAGE value="- Modify file processor to include word location" />
     <MESSAGE value="- add storage attributes to BinarySearchTree class for returning occurrence list when searching" />
-    <option name="LAST_COMMIT_MESSAGE" value="- add storage attributes to BinarySearchTree class for returning occurrence list when searching" />
+    <MESSAGE value="- Move unused data structures to storage directory&#10;- Move unused algorithms to storage directory&#10;- Rename Sorter class to QuickSort" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Move unused data structures to storage directory&#10;- Move unused algorithms to storage directory&#10;- Rename Sorter class to QuickSort" />
   </component>
 </project>

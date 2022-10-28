@@ -2,29 +2,29 @@ import java.util.LinkedList;
 
 public class BinarySearchTree {
 
-    /** constructor */
+    /** Class constructor */
     public BinarySearchTree(){
         this.root = null;
     }
 
-    /** attribute 1, a binary node */
+    /** Attribute 1, a binary node */
     private BinaryNode root;
 
-    /** attribute 2, an int */
+    /** Attribute 2, an int */
     private int comparisons = 0;
 
-    /** attribute 3, a String */
+    /** Attribute 3, a String */
     private String nodeWord;
 
-    /** attribute 3, a String */
+    /** Attribute 3, a String */
     private String nodeLocation;
 
-    /** Return the stored word */
+    /** Returns the stored word */
     public String getNodeWord() {
         return nodeWord;
     }
 
-    /** Return the stored location */
+    /** Returns the stored location */
     public String getNodeLocation() {
         return nodeLocation;
     }
@@ -34,17 +34,17 @@ public class BinarySearchTree {
         return comparisons;
     }
 
-    /** method for checking if tree is empty */
+    /** Checks if a tree is empty */
     public boolean empty(){
         return this.root == null;
     }
 
-    /** public method for calling contain() method */
+    /** Calls the contain method */
     public boolean contain(String word){
         return this.contain(word, this.root);
     }
 
-    /** method for checking if tree contains a node with a given element */
+    /** Recursively verifies if a node with a given element exists within the tree */
     private boolean contain (String word, BinaryNode node) {
         if (node == null){
             return false;
@@ -63,9 +63,7 @@ public class BinarySearchTree {
         }
     }
 
-
-
-    /** public method for calling treeMin() method */
+    /** Calls the treeMin() method */
     public BinaryNode treeMin () {
         if (this.empty()) {
             return null;
@@ -74,7 +72,7 @@ public class BinarySearchTree {
         }
     }
 
-    /** method for finding node with the minimum element */
+    /** Recursively finds the node with the lesser element */
     private BinaryNode treeMin (BinaryNode node) {
         if (this.empty()) {
             return null;
@@ -85,7 +83,7 @@ public class BinarySearchTree {
         } return node;
     }
 
-    /** public method for calling treeMax() method */
+    /** Calls the treeMax() method */
     public BinaryNode treeMax () {
         if (this.empty()) {
             return null;
@@ -94,7 +92,7 @@ public class BinarySearchTree {
         }
     }
 
-    /** method for finding node with the maximum element */
+    /** Recursively finds the node with the greater element */
     private BinaryNode treeMax (BinaryNode node) {
         if (node != null) {
             while (node.getRight() != null){
@@ -103,12 +101,12 @@ public class BinarySearchTree {
         } return node;
     }
 
-    /** public method for calling insert() method */
+    /** Calls the insert() method */
     public void insert (String word, String location) {
         this.root = this.insert(word, location, this.root);
     }
 
-    /** method for inserting a node with a given element */
+    /** Recursively inserts a node to the tree in its corresponding location */
     private BinaryNode insert (String word, String location, BinaryNode node) {
         if ( node == null){
             return new BinaryNode(word, location,null, null);
@@ -126,12 +124,12 @@ public class BinarySearchTree {
         return node;
     }
 
-    /** public method for calling delete() method */
+    /** Calls the delete method */
     public void delete (String word) {
         this.root = this.delete(word, this.root);
     }
 
-    /** method for deleting a node with a given element */
+    /** Recursively deletes a node with a given element */
     private BinaryNode delete (String word, BinaryNode node) {
 
         if (node == null){
@@ -152,15 +150,15 @@ public class BinarySearchTree {
         return node;
     }
 
-    /** binary node for binary search tree */
+    /** Binary node class for binary search tree */
     private static class BinaryNode {
 
-        /** constructor 1 */
+        /** Class constructor 1 */
         public BinaryNode (String word, String occurrence){
             this(word, occurrence, null, null);
         }
 
-        /** constructor 2 */
+        /** Class constructor 2 */
         public BinaryNode (String word, String location, BinaryNode left, BinaryNode right){
 
             this.word = word;
@@ -176,46 +174,54 @@ public class BinarySearchTree {
             this.right = right;
         }
 
-        /** attribute 1, a string */
+        /** Attribute 1, a string */
         private String word;
 
-        /** attribute 2, a Linked List */
+        /** Attribute 2, a Linked List */
         private LinkedList occurrence;
 
-        /** attribute 3, a binary node */
+        /** Attribute 3, a binary node */
         private BinaryNode left;
 
-        /** attribute 4, a binary node */
+        /** Attribute 4, a binary node */
         private BinaryNode right;
 
-        /** getter and setter for word attribute */
+        /** Returns the stored word of a node */
         public String getWord () {
             return word;
         }
+
+        /** Modifies the stored word a node */
         public void setWord (String word) {
             this.word = word;
         }
 
-        /** getter and setter methods for occurrence attribute */
+        /** Returns the occurrence list */
         public LinkedList getOccurrence () {
             return occurrence;
         }
+
+        /** Modifies the occurrence list of a node */
         public void setOccurrence (LinkedList occurrence) {
             this.occurrence = occurrence;
         }
 
-        /** getter and setter methods for left node attribute */
+        /** Returns the left child of a node */
         public BinaryNode getLeft() {
             return this.left;
         }
+
+        /** Modifies the left child of a node */
         public void setLeft(BinaryNode node) {
             this.left = node;
         }
 
-        /** getter and setter methods for right node attribute */
+        /** Returns right child of a node */
         public BinaryNode getRight() {
             return this.right;
         }
+
+        /** Modifies the right child of a node */
         public void setRight(BinaryNode right) {
             this.right = right;
         }

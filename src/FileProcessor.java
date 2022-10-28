@@ -4,10 +4,23 @@ import java.io.FileReader;
 import java.util.Scanner;
 
 public class FileProcessor {
-    private BinarySearchTree bst = new BinarySearchTree();
-    private File library = new File("TextsLibrary");
+
+    /** Class constructor */
+    public FileProcessor(){
+        this.bst = new BinarySearchTree();
+        this.library = new File("TextsLibrary");
+    }
+
+    /** attribute 1, a binary search tree */
+    private BinarySearchTree bst;
+
+    /** attribute 2, a binary file */
+    private File library;
+
+    /** attribute 3, a string array */
     private String[] contents;
 
+    /** parses every document from the library directory and loads their individual words into a tree */
     public void process() {
 
         contents = library.list();
@@ -50,10 +63,12 @@ public class FileProcessor {
         }
     }
 
+    /** Returns the binary search tree of the bst attribute */
     public BinarySearchTree getBST() {
         return bst;
     }
 
+    /** Modifies the binary search tree of the bst attribute*/
     public void setBST (BinarySearchTree binarySearchTree) {
         this.bst = binarySearchTree;
     }
