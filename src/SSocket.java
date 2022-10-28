@@ -6,24 +6,28 @@ public class SSocket {
     /** Class constructor */
     public SSocket() {}
 
-    /** attribute 1, a socket */
+    /** Attribute 1, a socket */
     private Socket cs;
 
-    /** attribute 2, a server socket */
+    /** Attribute 2, a server socket */
     private ServerSocket ss;
 
     /** Attribute 3, a FileProcessor class */
     private FileProcessor fp = new FileProcessor();
 
-    /** cs Socket getter and setter */
+    /** Returns the client socket */
     public Socket getCs() {return cs;}
+
+    /** Modifies the client socket */
     public void setCs(Socket cs) {this.cs = cs;}
 
-    /** ss Server Socket getter and setter */
+    /** Returns the server socket */
     public ServerSocket getSs() {return ss;}
+
+    /** Modifies the server socket */
     public void setSs(ServerSocket ss) {this.ss = ss;}
 
-    /** Runs the server perpetually through a while loop */
+    /** Perpetually runs the server through a while loop */
     public void run(){
         fp.process();
 
