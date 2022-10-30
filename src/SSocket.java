@@ -7,13 +7,13 @@ public class SSocket {
     public SSocket() {}
 
     /** Attribute 1, a socket */
-    private Socket cs;
+    private Socket cs = null;
 
     /** Attribute 2, a server socket */
-    private ServerSocket ss;
+    private ServerSocket ss = null;
 
     /** Attribute 3, a FileProcessor class */
-    private FileProcessor fp = new FileProcessor();
+    private final FileProcessor fp = new FileProcessor();
 
     /** Returns the client socket */
     public Socket getCs() {return cs;}
@@ -28,47 +28,78 @@ public class SSocket {
     public void setSs(ServerSocket ss) {this.ss = ss;}
 
     /** Perpetually runs the server through a while loop */
-    public void run(){
+    public void run() throws IOException {
+
         fp.process();
 
-        try {
-            ss = new ServerSocket(6174);
-            System.out.println("waiting...");
+        InputStreamReader inputStreamReader = null;
+        OutputStreamWriter outputStreamWriter = null;
 
-            while (true) {
+        BufferedReader bufferedReader = null;
+        BufferedWriter bufferedWriter = null;
 
-                try {
-                    cs = ss.accept();
-                    System.out.println("connected to: " + cs.getInetAddress());
+        ss = new ServerSocket(6174);
+        System.out.println("waiting...");
 
-                    while (true) {
+        while (true) {
 
-                        String word = receive();
+            try {
 
-                        if (fp.getBST().contain(word)) {
-                            send(fp.getBST().getNodeLocation());
+                cs = ss.accept();
+                System.out.println("connected to: " + cs.getInetAddress());
 
-                        }
-                        else {
-                            send("No results found");
-                        }
+                inputStreamReader = new InputStreamReader(cs.getInputStream());
+                outputStreamWriter = new OutputStreamWriter(cs.getOutputStream());
 
-                        if (cs.isClosed()) {
-                            shutDown();
-                            break;
-                        }
+                bufferedReader = new BufferedReader(inputStreamReader);
+                bufferedWriter = new BufferedWriter(outputStreamWriter);
+
+                while (true) {
+
+                    String word = bufferedReader.readLine();
+
+                    if (cs.isClosed()) {
+                        shutDown();
+                        break;
                     }
-                    break;
-                }
-                catch (Exception e) {
-                    break;
-                }
-            }
 
+                    if (fp.getBST().contain(word)) {
+
+                        bufferedWriter.write(fp.getBST().getNodeLocation());
+                        bufferedWriter.newLine();
+                        bufferedWriter.flush();
+
+                    } else {
+
+                        bufferedWriter.write("No results, try searching for something else");
+                        bufferedWriter.newLine();
+                        bufferedWriter.flush();
+
+                    }
+                }
+                break;
+            }
+            catch (Exception e) {
+                break;
+            }
         }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+    }
+
+
+    /** Reads incoming data from the client */
+    public String receive() throws IOException {
+        /* waits for client to read data */
+        cs.setSoLinger(true, 10);
+
+        /* data flux for receiving data from client */
+        DataInputStream bufferIn = new DataInputStream (cs.getInputStream());
+
+        /* object to be read is created and assigned data from the flux */
+        SocketData auxIn = new SocketData("");
+        auxIn.readObject (bufferIn);
+
+        System.out.println ("received: " + auxIn);
+        return auxIn.toString();
     }
 
     /** Sends data to the client */
@@ -91,22 +122,6 @@ public class SSocket {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    /** Reads incoming data from the client */
-    public String receive() throws IOException {
-        /* waits for client to read data */
-        cs.setSoLinger(true, 10);
-
-        /* data flux for receiving data from client */
-        DataInputStream bufferIn = new DataInputStream (cs.getInputStream());
-
-        /* object to be read is created and assigned data from the flux */
-        SocketData auxIn = new SocketData("");
-        auxIn.readObject (bufferIn);
-
-        System.out.println ("received: " + auxIn);
-        return auxIn.toString();
     }
 
     /** Closes both server and client */
