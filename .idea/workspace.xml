@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- fix byte loss issue by using buffered writers and readers">
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- test functionality .pdf and .docx recognizing method">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/pdfbox_app_2_0_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PdfReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextFinderServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TextFinderServer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,23 +38,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mavic/Desktop/Marco/Datos/Proyectos/Pr2/TextFinderServer/TextsLibrary&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3816092&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/mavic/Desktop/Java/Libraries/pdfbox-app-2.0.27.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3816092",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mavic\Desktop\Marco\Datos\Proyectos\Pr2\TextFinderServer\TextsLibrary" />
@@ -103,7 +109,8 @@
       <workItem from="1666914565957" duration="3844000" />
       <workItem from="1666921485250" duration="7190000" />
       <workItem from="1666993014094" duration="3684000" />
-      <workItem from="1667094053664" duration="5173000" />
+      <workItem from="1667094053664" duration="5240000" />
+      <workItem from="1667142933021" duration="3297000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -385,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667099521327</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="- test functionality .pdf and .docx recognizing method">
+      <created>1667138049392</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1667138049392</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,7 +417,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- fix treeMin() and treeMax() methods recursion" />
     <MESSAGE value="- remove static void main() method from BinarySearchTree class" />
     <MESSAGE value="- create classes for the three sorting algorithms to use" />
     <MESSAGE value="- implement Bubblesort algorithm for sorting results by name" />
@@ -428,6 +441,7 @@
     <MESSAGE value="- Formally document SSocket for Javadoc generation" />
     <MESSAGE value="- make a working backup of the server" />
     <MESSAGE value="- fix byte loss issue by using buffered writers and readers" />
-    <option name="LAST_COMMIT_MESSAGE" value="- fix byte loss issue by using buffered writers and readers" />
+    <MESSAGE value="- test functionality .pdf and .docx recognizing method" />
+    <option name="LAST_COMMIT_MESSAGE" value="- test functionality .pdf and .docx recognizing method" />
   </component>
 </project>

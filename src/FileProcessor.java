@@ -20,6 +20,10 @@ public class FileProcessor {
     /** Attribute 3, a string array */
     private String[] contents;
 
+    /** Attribute 4, a PdfReader object */
+
+    private PdfReader pdfReader;
+
     /** Parses every document from the library directory and loads their individual words into a tree */
     public void process() {
 
@@ -46,6 +50,8 @@ public class FileProcessor {
 
                     } else if (contents[i].contains(".pdf")) {
                         System.out.println("reading pdf");
+
+
                         i++;
 
                     } else if (contents[i].contains(".docx")){
