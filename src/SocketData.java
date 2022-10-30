@@ -22,7 +22,7 @@ public class SocketData implements Serializable{
     /** Writes the d attribute to the output data flux */
     public void writeObject(java.io.DataOutputStream out) throws IOException{
         out.writeInt (len + 1);
-        out.writeBytes (data);
+        out.writeBytes(data);
         out.writeByte ('\0');
     }
 

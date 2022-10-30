@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- Formally document QuickSort for Javadoc generation">
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- Formally document SSocket for Javadoc generation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SocketData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SocketData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +102,9 @@
       <workItem from="1666838023251" duration="3707000" />
       <workItem from="1666841781238" duration="4647000" />
       <workItem from="1666914565957" duration="3844000" />
-      <workItem from="1666921485250" duration="2590000" />
+      <workItem from="1666921485250" duration="7190000" />
+      <workItem from="1666993014094" duration="3684000" />
+      <workItem from="1667094053664" duration="633000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -355,7 +358,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666924434371</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="- Formally document SocketData for Javadoc generation">
+      <created>1666924681302</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1666924681302</updated>
+    </task>
+    <task id="LOCAL-00038" summary="- Formally document SSocket for Javadoc generation">
+      <created>1666924814944</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1666924814944</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,8 +390,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- give basic functionality to BinaryNode" />
-    <MESSAGE value="- properly encapsulate BinaryNode class" />
     <MESSAGE value="- implement BinarySearchTree with crude empty(), contain() and insert() methods" />
     <MESSAGE value="- implement treeMin(), treeMax() and delete methods to BinarySearchTree class" />
     <MESSAGE value="- fix treeMin() and treeMax() methods recursion" />
@@ -398,6 +413,8 @@
     <MESSAGE value="- Move unused data structures to storage directory&#10;- Move unused algorithms to storage directory&#10;- Rename Sorter class to QuickSort" />
     <MESSAGE value="- Formally document BinarySearchTree for Javadoc generation" />
     <MESSAGE value="- Formally document QuickSort for Javadoc generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Formally document QuickSort for Javadoc generation" />
+    <MESSAGE value="- Formally document SocketData for Javadoc generation" />
+    <MESSAGE value="- Formally document SSocket for Javadoc generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Formally document SSocket for Javadoc generation" />
   </component>
 </project>

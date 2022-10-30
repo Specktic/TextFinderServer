@@ -46,11 +46,11 @@ public class SSocket {
                         String word = receive();
 
                         if (fp.getBST().contain(word)) {
-                            System.out.println(fp.getBST().getNodeWord());
-                            System.out.println(fp.getBST().getNodeLocation());
+                            send(fp.getBST().getNodeLocation());
+
                         }
                         else {
-                            System.out.println("nah");
+                            send("No results found");
                         }
 
                         if (cs.isClosed()) {
@@ -61,7 +61,7 @@ public class SSocket {
                     break;
                 }
                 catch (Exception e) {
-                    e.printStackTrace();
+                    break;
                 }
             }
 
@@ -71,10 +71,32 @@ public class SSocket {
         }
     }
 
+    /** Sends data to the client */
+    public void send(String location) throws IOException {
+        try {
+
+            /* waits for data to be collected before closing */
+            cs.setSoLinger(true, 10);
+
+            /* data flux for sending data to the client */
+            DataOutputStream bufferOut = new DataOutputStream(cs.getOutputStream());
+
+            /* data is written on the output flux */
+            SocketData auxOut = new SocketData(location);
+            auxOut.writeObject(bufferOut);
+
+            /* prints data sent to console */
+            System.out.println("sent: " + auxOut);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     /** Reads incoming data from the client */
     public String receive() throws IOException {
         /* waits for client to read data */
-        getCs().setSoLinger(true, 10);
+        cs.setSoLinger(true, 10);
 
         /* data flux for receiving data from client */
         DataInputStream bufferIn = new DataInputStream (cs.getInputStream());
@@ -85,17 +107,6 @@ public class SSocket {
 
         System.out.println ("received: " + auxIn);
         return auxIn.toString();
-    }
-
-    /** Sends data to the client */
-    public void send() throws IOException {
-        /* data flux for sending data to the client */
-        DataOutputStream bufferOut = new DataOutputStream (getCs().getOutputStream());
-
-        /* object to be sent is created */
-        SocketData auxOut = new SocketData("8913");
-        auxOut.writeObject (bufferOut);
-        System.out.println("sent: " + auxOut);
     }
 
     /** Closes both server and client */
