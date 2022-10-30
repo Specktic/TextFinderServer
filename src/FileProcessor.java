@@ -41,21 +41,30 @@ public class FileProcessor {
                     Scanner sc = new Scanner(new BufferedReader(new FileReader(file)));
 
                     if (contents[i].contains(".txt")) {
+                        System.out.println("reading:" + contents[i]);
 
                         while (sc.hasNext()) {
                             String word = sc.next();
                             binarySearchTree.insert(word, contents[i]);
                         }
+
                         i++;
 
                     } else if (contents[i].contains(".pdf")) {
-                        System.out.println("reading pdf");
+                        System.out.println("reading:" + contents[i]);
 
+                        PdfReader pdfReader = new PdfReader();
+                        pdfReader.setFilePath(file.getPath());
+                        String text = pdfReader.pdfToString();
+
+                        for (String word: text.split(" ")) {
+                            binarySearchTree.insert(word, contents[i]);
+                        }
 
                         i++;
 
                     } else if (contents[i].contains(".docx")){
-                        System.out.println("reading docx");
+                        System.out.println("reading:" + contents[i]);
                         i++;
 
                     } else {

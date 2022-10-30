@@ -21,7 +21,7 @@ public class PdfReader {
 
     }
 
-    public String pdfWord() throws IOException {
+    public String pdfToString() throws IOException {
         this.pdfStripper = null;
         this.pdDoc = null;
         this.cosDoc = null;

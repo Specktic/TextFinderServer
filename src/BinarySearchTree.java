@@ -108,7 +108,7 @@ public class BinarySearchTree {
 
     /** Recursively inserts a node to the tree in its corresponding location */
     private BinaryNode insert (String word, String location, BinaryNode node) {
-        if ( node == null){
+        if (node == null){
             return new BinaryNode(word, location,null, null);
         }
 

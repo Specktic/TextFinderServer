@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- test functionality .pdf and .docx recognizing method">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/pdfbox_app_2_0_27.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PdfReader.java" afterDir="false" />
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- add PdfReader class for reading .pdf type files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextFinderServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TextFinderServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PdfReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PdfReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +108,7 @@
       <workItem from="1666921485250" duration="7190000" />
       <workItem from="1666993014094" duration="3684000" />
       <workItem from="1667094053664" duration="5240000" />
-      <workItem from="1667142933021" duration="3297000" />
+      <workItem from="1667142933021" duration="4576000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -399,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667138049392</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="- add PdfReader class for reading .pdf type files">
+      <created>1667169066533</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1667169066533</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +422,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- remove static void main() method from BinarySearchTree class" />
     <MESSAGE value="- create classes for the three sorting algorithms to use" />
     <MESSAGE value="- implement Bubblesort algorithm for sorting results by name" />
     <MESSAGE value="- implement Bubblesort algorithm for sorting results by CREATION DATE" />
@@ -442,6 +446,7 @@
     <MESSAGE value="- make a working backup of the server" />
     <MESSAGE value="- fix byte loss issue by using buffered writers and readers" />
     <MESSAGE value="- test functionality .pdf and .docx recognizing method" />
-    <option name="LAST_COMMIT_MESSAGE" value="- test functionality .pdf and .docx recognizing method" />
+    <MESSAGE value="- add PdfReader class for reading .pdf type files" />
+    <option name="LAST_COMMIT_MESSAGE" value="- add PdfReader class for reading .pdf type files" />
   </component>
 </project>
