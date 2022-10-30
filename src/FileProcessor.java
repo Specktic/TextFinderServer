@@ -45,9 +45,11 @@ public class FileProcessor {
                         i++;
 
                     } else if (contents[i].contains(".pdf")) {
+                        System.out.println("reading pdf");
                         i++;
 
                     } else if (contents[i].contains(".docx")){
+                        System.out.println("reading docx");
                         i++;
 
                     } else {

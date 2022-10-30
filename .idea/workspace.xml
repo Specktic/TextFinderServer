@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- make a working backup of the server">
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- fix byte loss issue by using buffered writers and readers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +103,7 @@
       <workItem from="1666914565957" duration="3844000" />
       <workItem from="1666921485250" duration="7190000" />
       <workItem from="1666993014094" duration="3684000" />
-      <workItem from="1667094053664" duration="3727000" />
+      <workItem from="1667094053664" duration="5173000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -378,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667095308431</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="- fix byte loss issue by using buffered writers and readers">
+      <created>1667099521327</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1667099521327</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +403,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- implement treeMin(), treeMax() and delete methods to BinarySearchTree class" />
     <MESSAGE value="- fix treeMin() and treeMax() methods recursion" />
     <MESSAGE value="- remove static void main() method from BinarySearchTree class" />
     <MESSAGE value="- create classes for the three sorting algorithms to use" />
@@ -421,6 +427,7 @@
     <MESSAGE value="- Formally document SocketData for Javadoc generation" />
     <MESSAGE value="- Formally document SSocket for Javadoc generation" />
     <MESSAGE value="- make a working backup of the server" />
-    <option name="LAST_COMMIT_MESSAGE" value="- make a working backup of the server" />
+    <MESSAGE value="- fix byte loss issue by using buffered writers and readers" />
+    <option name="LAST_COMMIT_MESSAGE" value="- fix byte loss issue by using buffered writers and readers" />
   </component>
 </project>
