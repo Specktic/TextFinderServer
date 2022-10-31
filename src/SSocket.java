@@ -51,39 +51,64 @@ public class SSocket {
         bufferedReader = new BufferedReader(inputStreamReader);
         bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-        fp.process();
+        if (bufferedReader.readLine().equals("@LOAD@")) {
 
-        while (true) {
+            fp.process();
 
-            try {
+            bufferedWriter.write("Library Initialized");
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
 
-                while (true) {
+        }
 
-                    String word = bufferedReader.readLine();
+        if (bufferedReader.readLine().contains(".docx")) {
+            le.setFilePath(bufferedReader.readLine());
+            le.add();
+        }
 
-                    if (cs.isClosed()) {
-                        shutDown();
-                        break;
+        if (bufferedReader.readLine().contains(".pdf")) {
+            le.setFilePath(bufferedReader.readLine());
+            le.add();
+        }
+
+        if (bufferedReader.readLine().contains(".txt")) {
+            le.setFilePath(bufferedReader.readLine());
+            le.add();
+        }
+
+        else {
+
+            while (true) {
+
+                try {
+
+                    while (true) {
+
+                        String word = bufferedReader.readLine();
+
+                        if (cs.isClosed()) {
+                            shutDown();
+                            break;
+                        }
+
+                        if (fp.getBST().contain(word)) {
+
+                            bufferedWriter.write(fp.getBST().getNodeLocation());
+                            bufferedWriter.newLine();
+                            bufferedWriter.flush();
+
+                        } else {
+
+                            bufferedWriter.write("No results, try searching for something else");
+                            bufferedWriter.newLine();
+                            bufferedWriter.flush();
+
+                        }
                     }
-
-                    if (fp.getBST().contain(word)) {
-
-                        bufferedWriter.write(fp.getBST().getNodeLocation());
-                        bufferedWriter.newLine();
-                        bufferedWriter.flush();
-
-                    } else {
-
-                        bufferedWriter.write("No results, try searching for something else");
-                        bufferedWriter.newLine();
-                        bufferedWriter.flush();
-
-                    }
+                    break;
+                } catch (Exception e) {
+                    break;
                 }
-                break;
-            }
-            catch (Exception e) {
-                break;
             }
         }
     }
