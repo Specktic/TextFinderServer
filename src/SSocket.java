@@ -18,6 +18,9 @@ public class SSocket {
     /** Attribute 4, a LibraryEditor object */
     private final LibraryEditor le = new LibraryEditor();
 
+    /** Attribute 5, a boolean value */
+    private boolean libraryInitialized = false;
+
     /** Returns the client socket */
     public Socket getCs() {return cs;}
 
@@ -42,76 +45,98 @@ public class SSocket {
         ss = new ServerSocket(6174);
         System.out.println("waiting...");
 
-        cs = ss.accept();
-        System.out.println("connected to: " + cs.getInetAddress());
-
-        inputStreamReader = new InputStreamReader(cs.getInputStream());
-        outputStreamWriter = new OutputStreamWriter(cs.getOutputStream());
-
-        bufferedReader = new BufferedReader(inputStreamReader);
-        bufferedWriter = new BufferedWriter(outputStreamWriter);
-
-        if (bufferedReader.readLine().equals("@LOAD@")) {
-
-            fp.process();
-
-            bufferedWriter.write("Library Initialized");
-            bufferedWriter.newLine();
-            bufferedWriter.flush();
-
-        }
-
-        if (bufferedReader.readLine().contains(".docx")) {
-            le.setFilePath(bufferedReader.readLine());
-            le.add();
-        }
-
-        if (bufferedReader.readLine().contains(".pdf")) {
-            le.setFilePath(bufferedReader.readLine());
-            le.add();
-        }
-
-        if (bufferedReader.readLine().contains(".txt")) {
-            le.setFilePath(bufferedReader.readLine());
-            le.add();
-        }
-
-        else {
+        fp.process();
 
             while (true) {
 
+                cs = ss.accept();
+                System.out.println("connected to: " + cs.getInetAddress());
+
                 try {
+
+                    inputStreamReader = new InputStreamReader(cs.getInputStream());
+                    outputStreamWriter = new OutputStreamWriter(cs.getOutputStream());
+
+                    bufferedReader = new BufferedReader(inputStreamReader);
+                    bufferedWriter = new BufferedWriter(outputStreamWriter);
 
                     while (true) {
 
-                        String word = bufferedReader.readLine();
+                        String input = bufferedReader.readLine();
+
+                        if (input.equals("@LOAD@")) {
+
+                            fp.process();
+
+                            bufferedWriter.write("Library Initialized");
+                            bufferedWriter.newLine();
+                            bufferedWriter.flush();
+
+                        }
+
+                        else if (input.contains(".docx")) {
+
+                            System.out.println("docx is " + input);
+
+                            le.setFilePath(input);
+                            le.add();
+
+                            bufferedWriter.write("Added");
+                            bufferedWriter.newLine();
+                            bufferedWriter.flush();
+                        }
+
+                        else if (input.contains(".pdf")) {
+
+                            System.out.println("pdf is " + input);
+
+                            le.setFilePath(input);
+                            le.add();
+
+                            bufferedWriter.write("Added");
+                            bufferedWriter.newLine();
+                            bufferedWriter.flush();
+                        }
+
+                        else if (input.contains(".txt")) {
+
+                            System.out.println("txt is " + input);
+
+                            le.setFilePath(input);
+                            le.add();
+
+                            bufferedWriter.write("Added");
+                            bufferedWriter.newLine();
+                            bufferedWriter.flush();
+                        }
+
+                        else {
+
+                            if (fp.getBST().contain(input)) {
+
+                                bufferedWriter.write(fp.getBST().getNodeLocation());
+
+                            } else {
+
+                                bufferedWriter.write("No results, try searching for something else");
+
+                            }
+
+                            bufferedWriter.newLine();
+                            bufferedWriter.flush();
+
+                        }
 
                         if (cs.isClosed()) {
                             shutDown();
                             break;
                         }
-
-                        if (fp.getBST().contain(word)) {
-
-                            bufferedWriter.write(fp.getBST().getNodeLocation());
-                            bufferedWriter.newLine();
-                            bufferedWriter.flush();
-
-                        } else {
-
-                            bufferedWriter.write("No results, try searching for something else");
-                            bufferedWriter.newLine();
-                            bufferedWriter.flush();
-
-                        }
                     }
-                    break;
                 } catch (Exception e) {
                     break;
                 }
             }
         }
-    }
 
     /** Closes both server and client */
     public void shutDown() throws IOException {

@@ -49,6 +49,6 @@ public class LibraryEditor {
 
     /** Modifies the filePath attribute */
     public void setFilePath(String filePath) {
-        this.filePath = filePath;
+        this.filePath = "Texts" + "\\" + filePath;
     }
 }
