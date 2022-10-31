@@ -30,8 +30,6 @@ public class SSocket {
     /** Perpetually runs the server through a while loop */
     public void run() throws IOException {
 
-        fp.process();
-
         InputStreamReader inputStreamReader = null;
         OutputStreamWriter outputStreamWriter = null;
 
@@ -41,18 +39,21 @@ public class SSocket {
         ss = new ServerSocket(6174);
         System.out.println("waiting...");
 
+        cs = ss.accept();
+        System.out.println("connected to: " + cs.getInetAddress());
+
+        inputStreamReader = new InputStreamReader(cs.getInputStream());
+        outputStreamWriter = new OutputStreamWriter(cs.getOutputStream());
+
+        bufferedReader = new BufferedReader(inputStreamReader);
+        bufferedWriter = new BufferedWriter(outputStreamWriter);
+
+
+        fp.process();
+
         while (true) {
 
             try {
-
-                cs = ss.accept();
-                System.out.println("connected to: " + cs.getInetAddress());
-
-                inputStreamReader = new InputStreamReader(cs.getInputStream());
-                outputStreamWriter = new OutputStreamWriter(cs.getOutputStream());
-
-                bufferedReader = new BufferedReader(inputStreamReader);
-                bufferedWriter = new BufferedWriter(outputStreamWriter);
 
                 while (true) {
 
