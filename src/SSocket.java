@@ -85,45 +85,6 @@ public class SSocket {
         }
     }
 
-
-    /** Reads incoming data from the client */
-    public String receive() throws IOException {
-        /* waits for client to read data */
-        cs.setSoLinger(true, 10);
-
-        /* data flux for receiving data from client */
-        DataInputStream bufferIn = new DataInputStream (cs.getInputStream());
-
-        /* object to be read is created and assigned data from the flux */
-        SocketData auxIn = new SocketData("");
-        auxIn.readObject (bufferIn);
-
-        System.out.println ("received: " + auxIn);
-        return auxIn.toString();
-    }
-
-    /** Sends data to the client */
-    public void send(String location) throws IOException {
-        try {
-
-            /* waits for data to be collected before closing */
-            cs.setSoLinger(true, 10);
-
-            /* data flux for sending data to the client */
-            DataOutputStream bufferOut = new DataOutputStream(cs.getOutputStream());
-
-            /* data is written on the output flux */
-            SocketData auxOut = new SocketData(location);
-            auxOut.writeObject(bufferOut);
-
-            /* prints data sent to console */
-            System.out.println("sent: " + auxOut);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     /** Closes both server and client */
     public void shutDown() throws IOException {
         /* closes the client socket */

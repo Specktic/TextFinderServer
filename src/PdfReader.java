@@ -8,45 +8,27 @@ import java.io.File;
 import java.io.IOException;
 
 public class PdfReader {
-    private PDFParser parser;
-    private PDFTextStripper pdfStripper;
-    private PDDocument pdDoc;
-    private COSDocument cosDoc;
 
-    private String text;
     private String filePath;
-    private File file;
 
-    public PdfReader () {
-
-    }
+    public PdfReader () {}
 
     public String pdfToString() throws IOException {
-        this.pdfStripper = null;
-        this.pdDoc = null;
-        this.cosDoc = null;
 
-        file = new File(filePath);
-        parser = new PDFParser(new RandomAccessFile(file, "r"));
+        File file = new File(filePath);
+        PDFParser parser = new PDFParser(new RandomAccessFile(file, "r"));
 
         parser.parse();
-        cosDoc = parser.getDocument();
-        pdfStripper = new PDFTextStripper();
-        pdDoc = new PDDocument(cosDoc);
-        //pdDoc.getNumberOfPages();
+        COSDocument cosDoc = parser.getDocument();
+        PDFTextStripper pdfStripper = new PDFTextStripper();
+        PDDocument pdDoc = new PDDocument(cosDoc);
         pdfStripper.setStartPage(0);
         pdfStripper.setEndPage(pdDoc.getNumberOfPages());
-        this.text = pdfStripper.getText(pdDoc);
 
-        return this.text;
+        return pdfStripper.getText(pdDoc);
     }
 
     public void setFilePath(String filePath) {
         this.filePath = filePath;
     }
-
-    public PDDocument getPdDoc() {
-        return pdDoc;
-    }
-
 }

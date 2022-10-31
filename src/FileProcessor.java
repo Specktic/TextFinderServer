@@ -41,7 +41,7 @@ public class FileProcessor {
                     Scanner sc = new Scanner(new BufferedReader(new FileReader(file)));
 
                     if (contents[i].contains(".txt")) {
-                        System.out.println("reading:" + contents[i]);
+                        System.out.println("reading: " + contents[i]);
 
                         while (sc.hasNext()) {
                             String word = sc.next();
@@ -51,7 +51,7 @@ public class FileProcessor {
                         i++;
 
                     } else if (contents[i].contains(".pdf")) {
-                        System.out.println("reading:" + contents[i]);
+                        System.out.println("reading: " + contents[i]);
 
                         PdfReader pdfReader = new PdfReader();
                         pdfReader.setFilePath(file.getPath());
@@ -64,7 +64,16 @@ public class FileProcessor {
                         i++;
 
                     } else if (contents[i].contains(".docx")){
-                        System.out.println("reading:" + contents[i]);
+                        System.out.println("reading: " + contents[i]);
+
+                        DocxReader docxReader = new DocxReader();
+                        docxReader.setFilePath(file.getPath());
+                        String text = docxReader.docxToString();
+
+                        for (String word: text.split(" ")) {
+                            binarySearchTree.insert(word, contents[i]);
+                        }
+
                         i++;
 
                     } else {
