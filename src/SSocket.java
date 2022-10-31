@@ -12,8 +12,11 @@ public class SSocket {
     /** Attribute 2, a server socket */
     private ServerSocket ss = null;
 
-    /** Attribute 3, a FileProcessor class */
+    /** Attribute 3, a FileProcessor object */
     private final FileProcessor fp = new FileProcessor();
+
+    /** Attribute 4, a LibraryEditor object */
+    private final LibraryEditor le = new LibraryEditor();
 
     /** Returns the client socket */
     public Socket getCs() {return cs;}
@@ -47,7 +50,6 @@ public class SSocket {
 
         bufferedReader = new BufferedReader(inputStreamReader);
         bufferedWriter = new BufferedWriter(outputStreamWriter);
-
 
         fp.process();
 

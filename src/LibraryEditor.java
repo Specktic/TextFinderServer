@@ -40,7 +40,15 @@ public class LibraryEditor {
         File file = new File(filePath);
 
         file.delete();
-
     }
 
+    /** Returns the filePath attribute */
+    public String getFilePath() {
+        return filePath;
+    }
+
+    /** Modifies the filePath attribute */
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
 }
