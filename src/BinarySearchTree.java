@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public class BinarySearchTree {
@@ -18,6 +19,10 @@ public class BinarySearchTree {
 
     /** Attribute 3, a String */
     private String nodeLocation;
+
+    /** Attribute 4, a QuickSort object */
+    private final QuickSort qs = new QuickSort();
+
 
     /** Returns the stored word */
     public String getNodeWord() {
@@ -56,8 +61,20 @@ public class BinarySearchTree {
             } else if (compare > 0) {
                 return contain(word, node.getRight());
             } else {
+
+                Object[] objects = node.occurrence.toArray();
+                int len = objects.length;
+                String[] strings = new String[len];
+
+                for(int i = 0; i < len; i++) {
+                    strings[i] = (String) objects[i];
+                }
+
+                qs.quicksort(strings);
+
                 nodeWord = word;
-                nodeLocation = node.getOccurrence().toString();
+                nodeLocation = Arrays.toString(strings);
+
                 return true;
             }
         }

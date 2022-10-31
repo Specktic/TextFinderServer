@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- give SSocket ability to add specified files to library">
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="fix setFilePath method on LibraryEditor class for adding files to TextsLibrary">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SSocket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +110,7 @@
       <workItem from="1666921485250" duration="7190000" />
       <workItem from="1666993014094" duration="3684000" />
       <workItem from="1667094053664" duration="5240000" />
-      <workItem from="1667142933021" duration="18091000" />
+      <workItem from="1667142933021" duration="19587000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -441,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667187293000</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="fix setFilePath method on LibraryEditor class for adding files to TextsLibrary">
+      <created>1667191224015</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1667191224015</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +466,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- move library to server&#10;- move library management methods to server&#10;- add new server class" />
     <MESSAGE value="- separate SSocket's communication system into methods" />
     <MESSAGE value="- add contain(), treeMin() and treMax() methods to AVLTree for future delete() method" />
     <MESSAGE value="- add delete() method to AVLTree" />
@@ -484,6 +490,7 @@
     <MESSAGE value="- define remove method in LibraryEditor class for removing files from TextsLibrary" />
     <MESSAGE value="- add LibraryEditor object to SSocket class" />
     <MESSAGE value="- give SSocket ability to add specified files to library" />
-    <option name="LAST_COMMIT_MESSAGE" value="- give SSocket ability to add specified files to library" />
+    <MESSAGE value="fix setFilePath method on LibraryEditor class for adding files to TextsLibrary" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix setFilePath method on LibraryEditor class for adding files to TextsLibrary" />
   </component>
 </project>

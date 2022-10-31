@@ -133,6 +133,7 @@ public class SSocket {
                         }
                     }
                 } catch (Exception e) {
+                    e.printStackTrace();
                     break;
                 }
             }
