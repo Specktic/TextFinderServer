@@ -3,15 +3,17 @@ import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
 import java.io.FileInputStream;
-import java.io.IOException;
 
 public class DocxReader {
 
-    private String filePath;
-
+    /** Class constructor */
     public DocxReader () {}
 
-    public String docxToString() throws IOException {
+    /** Attribute 1, a string */
+    private String filePath;
+
+    /** Returns the file specified by the filepath attribute a single string */
+    public String docxToString() {
 
         XWPFWordExtractor extractor;
         XWPFDocument xwpfDoc;
@@ -30,6 +32,7 @@ public class DocxReader {
         return null;
     }
 
+    /** Modifies the filepath attribute  */
     public void setFilePath(String filePath) {
         this.filePath = filePath;
     }

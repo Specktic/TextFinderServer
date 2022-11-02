@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="fix setFilePath method on LibraryEditor class for adding files to TextsLibrary">
+    <list default="true" id="d16dcb40-10d1-4a95-8e3a-51dc809cb5fe" name="Changes" comment="- make so the method contain in the BinarySearchTree.java automatically sorts the occurrence list through a quick sort algorithm">
+      <change afterPath="$PROJECT_DIR$/Texts/CE-1103 Proyecto #2 - Text Finder.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Texts/Documentacion Pr2.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Texts/Documentacion Pr2.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DocxReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DocxReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SSocket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,28 +39,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/Users/mavic/Desktop/Java/Libraries/poi-bin-5.2.3-20220909/poi-bin-5.2.3/poi-scratchpad-5.2.3.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15332031",
-    "project.structure.side.proportion": "0.3816092",
-    "settings.editor.selected.configurable": "editor.preferences.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mavic/Desktop/Java/Libraries/poi-bin-5.2.3-20220909/poi-bin-5.2.3/poi-scratchpad-5.2.3.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15332031&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3816092&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mavic\Desktop\Marco\Datos\Proyectos\Pr2\TextFinderServer\TextsLibrary" />
@@ -110,7 +115,11 @@
       <workItem from="1666921485250" duration="7190000" />
       <workItem from="1666993014094" duration="3684000" />
       <workItem from="1667094053664" duration="5240000" />
-      <workItem from="1667142933021" duration="19587000" />
+      <workItem from="1667142933021" duration="19969000" />
+      <workItem from="1667240709580" duration="1602000" />
+      <workItem from="1667251768301" duration="637000" />
+      <workItem from="1667253917532" duration="1508000" />
+      <workItem from="1667256183412" duration="605000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial commit">
       <created>1665516816426</created>
@@ -448,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667191224015</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="- make so the method contain in the BinarySearchTree.java automatically sorts the occurrence list through a quick sort algorithm">
+      <created>1667192931065</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1667192931065</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +482,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- separate SSocket's communication system into methods" />
     <MESSAGE value="- add contain(), treeMin() and treMax() methods to AVLTree for future delete() method" />
     <MESSAGE value="- add delete() method to AVLTree" />
     <MESSAGE value="- move sorting algorithms into a single class for convenience" />
@@ -491,6 +506,7 @@
     <MESSAGE value="- add LibraryEditor object to SSocket class" />
     <MESSAGE value="- give SSocket ability to add specified files to library" />
     <MESSAGE value="fix setFilePath method on LibraryEditor class for adding files to TextsLibrary" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix setFilePath method on LibraryEditor class for adding files to TextsLibrary" />
+    <MESSAGE value="- make so the method contain in the BinarySearchTree.java automatically sorts the occurrence list through a quick sort algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="- make so the method contain in the BinarySearchTree.java automatically sorts the occurrence list through a quick sort algorithm" />
   </component>
 </project>

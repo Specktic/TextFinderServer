@@ -9,10 +9,13 @@ import java.io.IOException;
 
 public class PdfReader {
 
-    private String filePath;
-
+    /** Class constructor */
     public PdfReader () {}
 
+    /** Attribute 1, a string */
+    private String filePath;
+
+    /** Returns the file specified by the filepath attribute a single string */
     public String pdfToString() throws IOException {
 
         File file = new File(filePath);

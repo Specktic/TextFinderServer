@@ -18,9 +18,6 @@ public class SSocket {
     /** Attribute 4, a LibraryEditor object */
     private final LibraryEditor le = new LibraryEditor();
 
-    /** Attribute 5, a boolean value */
-    private boolean libraryInitialized = false;
-
     /** Returns the client socket */
     public Socket getCs() {return cs;}
 
@@ -133,7 +130,6 @@ public class SSocket {
                         }
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
                     break;
                 }
             }

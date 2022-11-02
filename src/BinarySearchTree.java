@@ -17,10 +17,10 @@ public class BinarySearchTree {
     /** Attribute 3, a String */
     private String nodeWord;
 
-    /** Attribute 3, a String */
+    /** Attribute 4, a String */
     private String nodeLocation;
 
-    /** Attribute 4, a QuickSort object */
+    /** Attribute 5, a QuickSort object */
     private final QuickSort qs = new QuickSort();
 
 
